@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../output.css">
+
+    <!-- scripts -->
+    <script src="script.js" defer></script>
+    <script src="../flowbite.min.js" defer></script>
+
+    <!-- title -->
+    <title>Ega - Keterampilan</title>
+</head>
+
+<body class="max-w-screen-lg mx-auto text-neutral-100 bg-black p-5">
+
+    <!-- bar navigasi -->
+    <nav class="bg-black mt-5 mb-8">
+        <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="../assets/logo.png" alt="Logo" class="h-5">
+            </a>
+
+            <!-- menu hamburger -->
+	    <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center justify-center text-sm md:hidden aria-controls=" navbar-default"
+                aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <img class="h-5" src="../assets/menu.png" alt="">
+            </button>
+
+            <!-- menu nav bar-->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="gap-3 md:gap-0 font-medium flex flex-col md:p-0 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+                    <li>
+                        <a class="bg-primary hover:underline text-neutral-950" href="../assets/CV.pdf">Unduh CV</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block md:border-0 md:p-0 hover:underline">Hal-hal</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block md:border-0 md:p-0 hover:underline">Tentang</a>
+                    </li>
+                    <li>
+                        <a href="../skill.html" class="md:border-0 md:p-0 hover:underline" title="English">EN</a>
+                        <span class="md:border-0 md:p-0">/</span>
+                        <span class="md:border-0 md:p-0 underline" title="Bahasa Indonesia (Terpilih)">>ID</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- content -->
+    <main class="">
+        <div class="mt-0 md:mt-20 mb-10 md:mb-20 flex">
+		<h1 class="text-4xl md:text-8xl"># Keterampilan</h1>
+        </div>
+	
+	<h2 class="mb-5 mt-12 md:mt-16 text-3xl md:text-5xl"># Geospasial</h2>
+
+        <div class="mb-5">
+            <img fetchpriority="high" class="w-full object-cover h-24 md:h-32 mb-2" src="../assets/map.png" alt="Banner">
+            <p class="text-wrap">(C) <a class="underline" href="https://www.openstreetmap.org/copyright">Kontributor OpenStreetMap</a>, Petak Transportasi milik <a class="underline" href="https://www.thunderforest.com/">Andy Alan</a></p>
+        </div>
+
+	<p>Sebagai <a class="underline" href="https://www.openstreetmap.org/user/Eganatha">Eganatha</a>, Saya suka membuat fitur Transportasi Publik, proposal pemerintah, guna-lahan, dan masih <a class="underline" href="https://www.openstreetmap.org/user/Eganatha/history">banyak lagi</a> dalam <a class="underline" href="https://www.openstreetmap.org/">OpenStreetMap</a>. Saya mahir dalam pengunaan format geodata terbuka, contohnya, geojson, gpx, shapefile, osm, dan program maupun layanan web yang membuat kontribusi dalam OSM dapat berjalan dengan lancar, JOSM dan API Overpass.</p>
+	
+	<h2 class="mb-5 mt-12 md:mt-16 text-3xl md:text-5xl"># Bahasa Pemrograman C</h2>
+
+	<p>C is low level programming language. I end up liking C because I was influenced by the <a class="underline" href="https://suckless.org">Suckless</a> community, and also because how it provides low access to the memory! After that I start compiling bunch of programs (mostly writen in C) and modifying it as I learn C along the way.</p>
+	
+	<h2 class="mb-5 mt-12 md:mt-16 text-3xl md:text-5xl"># Markup &amp; pengaturan-huruf</h2>
+	<div class="mb-5">
+            <img fetchpriority="high" class="w-full object-cover h-24 md:h-32 mb-2" src="../assets/latex.png" alt="Banner">
+	    <p class="text-wrap">Elementi di Dinamica e simulazione di volo - Agostino De Marco &amp; Domenico P. Coiro</p>
+        </div>
+
+	<p>I used LaTeX for most of my essays and <a class="underline" href="../assets/laporan-pipas.pdf">report</a>s, because I can just type whatever I want without bothering about the document styles and stuff. HTML is also used for most of my webpages and acompannied with some stylesheets.</p>
+
+	<h2 class="mb-5 mt-12 md:mt-16 text-3xl md:text-5xl"># Semi-audiofil</h2>
+
+	<p>I listen to music as other do, but sometimes the high fidelity ones. High fidelity does not always means high quality, It means the copies of the song should sound as close as it was recoreded on the studio. Don't ask me where I <a class="underline" href="https://en.wikipedia.org/wiki/Online_piracy">got</a> those high fidelity songs...</p>
+
+	<h2 class="mb-5 mt-12 md:mt-16 text-3xl md:text-5xl"># Lainnya</h2>
+	
+	<p>I use Fedora GNU/Linux, dwm as the window manager, st as terminal (on my laptop). I use Arch GNU/Linux, and KDE Plasma (on my computer). Vim and NVIM as my preferred editors.</p>
+
+    </main>
+
+
+    <!-- footer -->
+    <footer class="bg-primary text-neutral-950 mt-20 p-4">
+        <div class="mx-auto w-full max-w-screen-xl">
+            <div class="mb-12"><img fetchpriority="low" class="h-20" src="../assets/large.png"alt=""></div>
+            <div class="md:flex md:justify-between">
+                <div class="grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Sosial</h2>
+                        <ul class="font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/greneboy/" class="hover:underline">Github</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Discord</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Legal</h2>
+                        <ul class="font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Kebijakan Privasi</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Syarat &amp; Ketentuan</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Peta</h2>
+                        <iframe height="250" class="w-full" src="https://www.openstreetmap.org/export/embed.html?bbox=109.13990020751955%2C-7.495238810727947%2C109.36031341552736%2C-7.375405379038378&amp;layer=mapnik&amp;marker=-7.435326183423262%2C109.25010681152344"></iframe>
+                    </div>
+                    <div class="w-auto">
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Alamat</h2>
+                        <p>SMP Telkom Purwokerto, Jalan Mayor Jenderal DI. Panjaitan, Teluk, Purwokerto, Banyumas, Central Java, Java, 53141</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-neutral-950 sm:mx-auto lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm sm:text-center">(C) 2025 <a href="#"
+                        class="hover:underline">Ega(TM)</a>. Hak Cipta Dilindungi. CC BY 4.0
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

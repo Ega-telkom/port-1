@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="p-2">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/icon.png">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/output.css">
+
+    <!-- scripts -->
+    <script src="../assets/js/flowbite.min.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
+
+    <!-- title -->
+    <title>Ega - Home</title>
+</head>
+
+<body class="max-w-7xl mx-auto text-neutral-100 z-5">
+
+    <!-- navigation bar -->
+    <include src="components/navbar.html"></include>
+
+    <!-- content -->
+    <span class="block text-neutral-600 text-sm">#main</span>
+    <main class="main border-t border-dashed border-[#484848]">
+
+        <span class="bg-black block text-neutral-600 text-sm">#banner mb-10</span>
+        <div class="bg-black pb-10">
+            <img fetchpriority="high" class="w-full object-cover h-32 xl:h-48 mb-2" src="../assets/images/banner.webp"
+                alt="Banner">
+            <p class="text-wrap">> r/ultrawidemasterrace</p>
+        </div>
+
+        <span class="bg-black block text-neutral-600 text-sm">#h1-greet mb-10 xl:mb-20 flex</span>
+        <div class="flex greet">
+            <span id="shell" class="text-4xl xl:text-7xl"></span>
+            <span class="text-4xl xl:text-7xl">&nbsp;</span>
+            <span id="greetings" class="italic text-4xl xl:text-7xl"></span>
+            <img class="h-5 xl:h-5 pl-2" src="../assets/images/logo.png" alt="Logo">
+        </div>
+
+        <!-- /bin/sh -->
+        <div class="bg-black pt-10 pb-12">
+            <div class="flex">
+                <p>$~&nbsp;</p>
+                <p>:(){ :|:& };:</p>
+            </div>
+            <div class="flex">
+                <p>$~&nbsp;</p>
+                <p># Actually dont do that on your bash terminal... Like please dont do that I swear.</p>
+            </div>
+            <div class="flex">
+                <p>$~&nbsp;</p>
+                <p># AAAAAAAAAAAAA.....</p>
+            </div>
+        </div>
+
+        <span class="bg-black block text-neutral-600 text-sm">#h2-who mb-12</span>
+        <h2 class="text-3xl xl:text-5xl"># Who Am I?</h2>
+        <div class="bg-black pb-12 pt-2 xl:pt-5">
+            <p>I am Ega.</p>
+        </div>
+
+        <span class="bg-black block text-neutral-600 text-sm">#h2-skills mb-12</span>
+        <h2 class="text-3xl xl:text-5xl"># Skills</h2>
+        <div class="bg-black xl:pb-12 pb-5 pt-2 xl:pt-5">
+            <p>In summary i like linux and stuff and i write the reports and thesis with latex. I like to be different
+                because i am.</p>
+            <a class="underline" href="skill.html">See more ></a>
+
+            <div class="bg-black flex flex-wrap my-5 gap-12">
+                <img class="border-white p-1 h-8 xl:h-12" src="../assets/images/vim.png" alt="Vim">
+                <img class="h-8 xl:h-12" src="../assets/images/tux.png" alt="Tux">
+                <img class="h-8 xl:h-12" src="../assets/images/c.png" alt="C">
+                <img class="h-8 xl:h-12" src="../assets/images/latex-logo.png" alt="LaTeX">
+                <img class="h-8 xl:h-12" src="../assets/images/osm.png" alt="OpenSreetMap">
+                <img class="h-8 xl:h-12" src="../assets/images/bash.png" alt="Bash">
+                <img class="h-8 xl:h-12" src="../assets/images/html.png" alt="HTML5">
+                <img class="h-8 xl:h-12" src="../assets/images/css.png" alt="CSS">
+                <img class="h-8 xl:h-12" src="../assets/images/git.png" alt="git">
+            </div>
+        </div>
+        </div>
+
+        <span class="bg-black block text-neutral-600 text-sm">#h2-projects</span>
+        <h2 class="text-3xl xl:text-5xl"># Projects</h2>
+        <div class="bg-black xl:pb-12 pb-5 pt-2 xl:pt-5">
+            <div class="flex flex-wrap gap-12 pt-5">
+                <img class="h-8 xl:h-12" src="../assets/images/osm.png" alt="OpenStreetMap">
+                <img class="h-8 xl:h-12" src="../assets/images/wikimedia.png" alt="Wikimedia">
+                <img class="h-8 xl:h-12" src="../assets/images/wikipedia.png" alt="Wikipedia">
+                <img class="h-8 xl:h-12" src="../assets/images/suckless.png" alt="Suckless">
+                <img class="h-8 xl:h-12" src="../assets/images/linux-foundation.png" alt="Linux Foundation">
+            </div>
+        </div>
+
+        <span class="bg-black block text-neutral-600 text-sm">#h2-contact mb-12</span>
+        <h2 class="text-3xl xl:text-5xl"># Contacts</h2>
+
+        <div class="bg-black xl:pb-20 pb-12 pt-2 xl:pt-5">
+            <form action="mailto:someone@example.com" enctype="sha256" method="post" class="grid grid-cols-1 gap-5">
+                <input type="text" placeholder="Name" name="" id="" class="border border-white p-3 bg-black">
+                <input type="email" placeholder="Email" name="" id="" class="border border-white p-3 bg-black">
+                <textarea name="" placeholder="Comments" id="" cols="30" rows="10"
+                    class="border border-white p-3 bg-black"></textarea>
+                <button type="submit" class="bg-primary border-none p-3"><span
+                        class="text-neutral-950">Submit</span></button>
+            </form>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <include src="components/footer.html"></include>
+
+</body>
+
+</html>

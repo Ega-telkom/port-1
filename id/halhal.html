@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ikon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../output.css">
+
+    <!-- script -->
+    <script src="script.js" defer=""></script>
+    <script src="../flowbite.min.js" defer=""></script>
+
+    <!-- judul -->
+    <title>Ega - Hal-hal</title>
+</head>
+
+<body class="max-w-screen-lg mx-auto text-neutral-100 bg-black p-5">
+
+    <!-- bar navigasi -->
+    <nav class="bg-black mt-5 mb-8">
+        <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="../assets/logo.png" alt="Logo" class="h-5">
+            </a>
+
+            <!-- menu hamburger -->
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center justify-center text-sm md:hidden aria-controls=" navbar-default"="" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <img class="h-5" src="../assets/menu.png" alt="">
+            </button>
+
+            <!-- menu nav bar-->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="gap-3 md:gap-0 font-medium flex flex-col md:p-0 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+                    <li>
+                        <a class="bg-primary hover:underline text-neutral-950" href="../assets/CV.pdf">Unduh CV</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block md:border-0 md:p-0 hover:underline">Hal-hal</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block md:border-0 md:p-0 hover:underline">Tentang</a>
+                    </li>
+                    <li>
+                        <a href="../stuff.html" class="md:border-0 md:p-0 hover:underline" title="English">EN</a>
+                        <span class="md:border-0 md:p-0">/</span>
+                        <span class="md:border-0 md:p-0 underline" title="Bahasa Indonesia (Terpilih)">>ID</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- konten -->
+    <main class="">
+        <div class="mt-0 md:mt-20 mb-10 md:mb-20 flex">
+            <h1 class="text-4xl md:text-8xl"># Hal-hal</h1>
+        </div>
+
+        <h2 class="mb-5 mt-12 text-3xl md:text-6xl"># Keterampilan</h2>
+        <a class="mt-20 underline" href="keterampilan.html">Lihat lanjut ></a>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-primary text-neutral-950 mt-20 p-4">
+        <div class="mx-auto w-full max-w-screen-xl">
+            <div class="mb-12"><img fetchpriority="low" class="h-20" src="../assets/large.png" alt=""></div>
+            <div class="md:flex md:justify-between">
+                <div class="grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Sosial</h2>
+                        <ul class="font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/greneboy/" class="hover:underline">Github</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Discord</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Legal</h2>
+                        <ul class="font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Kebijakan Privasi</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Syarat &amp; Ketentuan</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Peta</h2>
+                        <iframe height="250" class="w-full" src="https://www.openstreetmap.org/export/embed.html?bbox=109.13990020751955%2C-7.495238810727947%2C109.36031341552736%2C-7.375405379038378&amp;layer=mapnik&amp;marker=-7.435326183423262%2C109.25010681152344"></iframe>
+                    </div>
+                    <div class="w-auto">
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Alamat</h2>
+                        <p>SMP Telkom Purwokerto, Jalan Mayor Jenderal DI. Panjaitan, Teluk, Purwokerto, Banyumas, Central Java, Java, 53141</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-neutral-950 sm:mx-auto lg:my-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm sm:text-center">(C) 2025 <a href="#" class="hover:underline">Ega(TM)</a>. Hak Cipta Dilindungi. CC BY 4.0
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
