@@ -7,7 +7,7 @@
     "start": "live-server",
     "build:css": "npx @tailwindcss/cli -i assets/styles/input.css -o assets/styles/output.css --watch --minify",
     "build": "npx posthtml pages/*.html -o ./ && posthtml pages/id/*.html -o ./id/",
-    "watch": "npx chokidar 'pages/**/*.html' 'components/**/*.html' -d 10000 -c 'npm run build'"
+    "watch": "npx chokidar 'pages/**/*.html' 'components/**/*.html' -d 8000 -c 'npm run build'"
   },
   "author": "Ega",
   "license": "MIT",
