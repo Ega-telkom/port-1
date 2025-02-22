@@ -1,0 +1,1 @@
+exclude: ["CNAME", "LICENSE", "package-lock.json", "package.json", "README.md", "posthtml.config.js"]
