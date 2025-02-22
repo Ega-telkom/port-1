@@ -4,7 +4,7 @@ Sebuah portfolio versi 1 milik Ega.
 ## Memulai & Membangun
 Untuk memulai server:
 ```sh
-npm run start
+npm run dev
 ```
 
 Untuk membangun `tailwindcss` secara otomatis:

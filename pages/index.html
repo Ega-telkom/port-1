@@ -23,7 +23,7 @@
 <body class="max-w-7xl mx-auto text-neutral-100 border-x border-gray48">
 
     <!-- navigation bar -->
-    <include src="components/navbar.html"></include>
+    <include src="components/navbar.html" locals='{ "currentPage": "index.html" }'></include>
 
     <!-- content -->
     <span class="block text-neutral-600 text-sm">#main</span>
@@ -31,9 +31,8 @@
 
         <span class="bg-black block text-neutral-600 text-sm">#banner mb-10</span>
         <div class="bg-black pb-10">
-            <img fetchpriority="high" class="w-full object-cover h-32 xl:h-48 mb-2" src="assets/images/banner.webp"
+            <img fetchpriority="high" class="w-full object-cover h-32 xl:h-48 mb-2" src="assets/images/banner.png"
                 alt="Banner">
-            <p class="text-wrap">> r/ultrawidemasterrace</p>
         </div>
 
         <span class="bg-black block text-neutral-600 text-sm">#h1-greet mb-10 xl:mb-20 flex</span>
@@ -64,6 +63,7 @@
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Who Am I?</h2>
         <div class="bg-black pb-12 pt-2 xl:pt-5">
             <p>I am Ega.</p>
+            <a class="underline" href="about.html">See more ></a>
         </div>
 
         <span class="bg-black block text-neutral-600 text-sm">#h2-skills mb-12</span>
@@ -102,13 +102,13 @@
         <span class="bg-black block text-neutral-600 text-sm">#h2-contact mb-12</span>
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Contacts</h2>
 
-        <div class="bg-black xl:pb-20 pb-12 pt-2 xl:pt-5">
+        <div class="bg-black pt-2 xl:pt-5">
             <form action="mailto:someone@example.com" enctype="sha256" method="post" class="grid grid-cols-1 gap-5">
                 <input type="text" placeholder="Name" name="" id="" class="border border-white p-3 bg-black">
                 <input type="email" placeholder="Email" name="" id="" class="border border-white p-3 bg-black">
                 <textarea name="" placeholder="Comments" id="" cols="30" rows="10"
                     class="border border-white p-3 bg-black"></textarea>
-                <button type="submit" class="bg-primary border-none p-3"><span
+                <button type="submit" class="bg-hacker border-none p-3"><span
                         class="text-neutral-950">Submit</span></button>
             </form>
         </div>
