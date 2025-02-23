@@ -76,3 +76,8 @@ html::before {
 html {
 	background-color: #000000;
 }
+
+.navigation.active {
+	text-decoration: underline;
+}
+  

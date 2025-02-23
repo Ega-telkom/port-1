@@ -17,6 +17,7 @@
     "lighthouse": "^12.3.0",
     "lighthouse-cli": "^0.1.2",
     "live-server": "^1.2.2",
+    "material-icons": "^1.13.14",
     "posthtml": "^0.16.6",
     "posthtml-cli": "^0.10.0",
     "posthtml-include": "^2.0.1",

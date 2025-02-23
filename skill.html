@@ -11,6 +11,7 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/output.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons/material-icons.css">
 
     <!-- scripts -->
     <script src="assets/js/flowbite.min.js" defer=""></script>
@@ -39,10 +40,16 @@
         <div class="mt-5 md:mt-0 hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="gap-3 font-medium flex flex-col md:p-0 mt-0 md:gap-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 <li>
-                    <a class="bg-hacker hover:underline primary text-neutral-950" href="assets/images/CV.pdf">Download CV</a>
+                    <a class="bg-hacker hover:underline primary text-neutral-950" href="assets/misc/CV.pdf">Download CV</a>
                 </li>
                 <li>
-                    <a href="about.html" class="block md:border-0 md:p-0 hover:underline">About</a>
+                    <a href="about.html" class="block md:border-0 md:p-0 hover:underline navigation ">/about</a>
+                </li>
+                <li>
+                    <a href="project.html" class="block md:border-0 md:p-0 hover:underline navigation ">/project</a>
+                </li>
+                <li>
+                    <a href="skill.html" class="block md:border-0 md:p-0 hover:underline navigation active">/skill</a>
                 </li>
                 <li>
                     <span class="md:border-0 md:p-0 underline" title="English (Selected)">>EN</span>
@@ -58,84 +65,91 @@
     <!-- content -->
     <span class="block text-neutral-600 text-sm">#main</span>
     <main class="bg-black border-t border-dashed border-[#484848]">
-        <h1 class="text-4xl xl:text-7xl mb-8 xl:mb-12 border-b border-dashed border-gray48"># Skill(s)</h1>
+        <h1 class="text-4xl xl:text-7xl border-b border-dashed border-gray48 mb-8 xl:mb-16"># Skill(s)</h1>
 
-        <h2 class="text-3xl xl:text-5xl border-b border-dashed border-gray48">## Geospatials</h2>
-        <div class="pb-12 pt-2 xl:pt-5">
+        <h2 class="text-3xl xl:text-4xl border-b border-dashed border-gray48">## Geospatials</h2>
+        <div class="pb-12 xl:pb-20 pt-4 xl:pt-5">
             <img fetchpriority="high" class="w-full object-cover h-24 xl:h-48 mb-2" src="assets/images/map.png" alt="Banner">
-            <p class="text-wrap">(C) <a class="underline" href="https://www.openstreetmap.org/copyright">OpenStreetMap
-                    Contributors</a>, Transport Tiles courtesy of <a class="underline" href="https://www.thunderforest.com/">Andy Alan</a></p>
+            <p class="text-wrap">(C) <a class="underline" href="https://www.openstreetmap.org/copyright">OpenStreetMap Contributors</a>, Transport Tiles courtesy of <a class="underline" href="https://www.thunderforest.com/">Andy Alan</a></p>
             <br>
-            <p>As <a class="underline" href="https://www.openstreetmap.org/user/Eganatha">Eganatha</a>, I love making
-                Public
-                Transport features, government proposals, landuses, and <a class="underline" href="https://www.openstreetmap.org/user/Eganatha/history">much more</a> on <a class="underline" href="https://www.openstreetmap.org/">OpenStreetMap</a>. I excel at open geodata formats, such as
-                (but
-                not limited to), geojson, gpx, shapefile, osm, and the programs and web services that makes it possible
-                to
-                contribute to OSM, JOSM and Overpass API.</p>
+            <p>
+                As <a class="underline" href="https://www.openstreetmap.org/user/Eganatha">Eganatha</a>, I love making Public Transport features, government proposals, landuses, and <a class="underline" href="https://www.openstreetmap.org/user/Eganatha/history">much more</a> on <a class="underline" href="https://www.openstreetmap.org/">OpenStreetMap</a>. I excel at open geodata formats, such as (but not limited to), geojson, gpx, shapefile, osm, and the programs and web services that makes it possible to contribute to OSM, JOSM and Overpass API.
+            </p>
         </div>
 
-        <h2 class="text-3xl xl:text-5xl border-b border-dashed border-gray48">## C Programming Language</h2>
-        <div class="pb-12 pt-2 xl:pt-5">
-            <p>C is low level programming language. I end up liking C because I was influenced by the <a class="underline" href="https://suckless.org">Suckless</a> community, and also because how it
-                provides low access to the
-                memory! After that I start compiling bunch of programs (mostly writen in C) and modifying it as I learn
-                C
-                along the way.</p>
+        <h2 class="text-3xl xl:text-4xl border-b border-dashed border-gray48">## Photo/Cinema-graphy</h2>
+        <div class="pb-12 xl:pb-20 pt-4 xl:pt-5">
+            <img fetchpriority="high" class="w-full object-cover h-24 xl:h-48 mb-2" src="assets/images/photographic.jpg" alt="Banner">
+            <p class="text-wrap">Self-made: A long exposure image, I call it "photon smudges"</p>
+            <br>
+            <p>
+                I know a little bit of a photography and cinematography lore. Previously I was not interested in programming at all, time has changed and this has become my second thing I do just in case.
+            </p>
         </div>
 
-        <h2 class="text-3xl xl:text-5xl border-b border-dashed border-gray48">## Markups &amp; typesettings</h2>
-        <div class="pb-12 pt-2 xl:pt-5">
+        <h2 class="text-3xl xl:text-4xl border-b border-dashed border-gray48">## C Programming Language</h2>
+        <div class="pb-12 xl:pb-20 pt-4 xl:pt-5">
+            <p>
+                C is low level programming language. I end up liking C because I was influenced by the <a class="underline" href="https://suckless.org">Suckless</a> community, and also because how it provides low access to the memory! After that I start compiling bunch of programs (mostly writen in C) and modifying it as I learn C along the way.
+            </p>
+        </div>
+
+        <h2 class="text-3xl xl:text-4xl border-b border-dashed border-gray48">## Markups &amp; typesettings</h2>
+        <div class="pb-12 xl:pb-20 pt-4 xl:pt-5">
             <img fetchpriority="high" class="w-full object-cover h-24 xl:h-48 mb-2" src="assets/images/latex.png" alt="Banner">
             <p class="text-wrap">Elementi di Dinamica e simulazione di volo - Agostino De Marco &amp; Domenico P. Coiro
             </p>
             <br>
-            <p>I used LaTeX for most of my essays and <a class="underline" href="assets/images/laporan-pipas.pdf">report</a>s,
-                because I can just type whatever I want without bothering about the document styles and stuff. HTML is
-                also
-                used for most of my webpages and acompannied with some stylesheets.</p>
+            <p>
+                I used LaTeX for most of my essays and <a class="underline" href="assets/misc/laporan-pipas.pdf">report</a>s, because I can just type whatever I want without bothering about the document styles and stuff. HTML is also used for most of my webpages and acompannied with some external styleshets, and building tools.
+            </p>
         </div>
 
-        <h2 class="text-3xl xl:text-5xl border-b border-dashed border-gray48">## Semi audiphile</h2>
+        <h2 class="text-3xl xl:text-4xl border-b border-dashed border-gray48">## Semi audiphile</h2>
+        <div class="pb-12 xl:pb-20 pt-4 xl:pt-5">
+            <p>
+                I listen to music as other do, but sometimes the high fidelity ones. High fidelity does not always means high quality, It means the copies of the song should sound as close as it was recoreded on the studio. Don't ask me where I <a class="underline" href="https://en.wikipedia.org/wiki/Online_piracy">got</a> those songs...
+            </p>
+        </div>
 
-        <p>I listen to music as other do, but sometimes the high fidelity ones. High fidelity does not always means high
-            quality, It means the copies of the song should sound as close as it was recoreded on the studio. Don't ask
-            me where I <a class="underline" href="https://en.wikipedia.org/wiki/Online_piracy">got</a> those high
-            fidelity songs...</p>
-
-        <h2 class="mb-5 mt-12 md:mt-16 text-3xl md:text-5xl"># Others</h2>
-
-        <p>I use Fedora GNU/Linux, dwm as the window manager, st as terminal (on my laptop). I use Arch GNU/Linux, and
-            KDE Plasma (on my computer). Vim and NVIM as my preferred editors.</p>
+        <h2 class="text-3xl xl:text-4xl border-b border-dashed border-gray48">## Others</h2>
+        <div class="pt-4 xl:pt-5">
+            <p>
+                I familiarize my self with using UNIX-Like systems long time ago, for instance GNU/Linux. Using those system made my developments much more easier thanks to the nature of Open Source. To be specific I use Fedora Workstation 41 as of now on my laptop, and Arch Linux running KDE Plasma 6.3 on my desktop at home. Nowadays I rarely use Microsoft® Windows.
+            </p>
+        </div>
 
     </main>
 
     <!-- footer -->
-    <span class="bg-black block text-neutral-600 text-sm xl:pt-30 md:pt-24 pt-16">#footer text-white p-4</span>
-<footer class="text-white border-y border-dashed border-gray48">
+    <span class="bg-black block text-neutral-600 text-sm xl:pt-30 xl:pt-32 md:pt-24 pt-16">#footer text-white p-4</span>
+<footer class="text-white mb-10 border-y border-dashed border-gray48">
     <div class="mx-auto w-full max-w-screen-xl">
         <div class="mb-12"><img fetchpriority="low" class="h-20 xl:h-30" src="assets/images/large.png" alt=""></div>
         <div class="md:flex md:justify-between">
             <div class="grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2">
                 <div>
                     <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">Socials</h2>
-                    <ul class="font-medium">
-                        <li class="mb-4">
-                            <a href="https://github.com/Ega-telkom/" class="hover:underline">Github</a>
+                    <ul class="font-medium flex xl:grid gap-5">
+                        <li class="">
+                            <a href="https://github.com/Ega-telkom/" class="hover:underline">Github<span class="material-icons-outlined">open_in_new</span></a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">LinkedIn</a>
+                            <a href="#" class="hover:underline">LinkedIn<span class="material-icons-outlined">open_in_new</span></a>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">See Also</h2>
-                    <ul class="font-medium">
-                        <li class="mb-4">
+                    <ul class="font-medium flex xl:grid gap-5">
+                        <li>
                             <a href="about.html" class="hover:underline">About</a>
                         </li>
                         <li>
                             <a href="skill.html" class="hover:underline">Skills</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Ega-telkom/port-1" class="hover:underline">Source Code<span class="material-icons-outlined">open_in_new</span></a>
                         </li>
                     </ul>
                 </div>

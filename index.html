@@ -11,6 +11,7 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/output.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons/material-icons.css">
 
     <!-- scripts -->
     <script src="assets/js/flowbite.min.js" defer=""></script>
@@ -39,10 +40,16 @@
         <div class="mt-5 md:mt-0 hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="gap-3 font-medium flex flex-col md:p-0 mt-0 md:gap-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 <li>
-                    <a class="bg-hacker hover:underline primary text-neutral-950" href="assets/images/CV.pdf">Download CV</a>
+                    <a class="bg-hacker hover:underline primary text-neutral-950" href="assets/misc/CV.pdf">Download CV</a>
                 </li>
                 <li>
-                    <a href="about.html" class="block md:border-0 md:p-0 hover:underline">About</a>
+                    <a href="about.html" class="block md:border-0 md:p-0 hover:underline navigation ">/about</a>
+                </li>
+                <li>
+                    <a href="project.html" class="block md:border-0 md:p-0 hover:underline navigation ">/project</a>
+                </li>
+                <li>
+                    <a href="skill.html" class="block md:border-0 md:p-0 hover:underline navigation ">/skill</a>
                 </li>
                 <li>
                     <span class="md:border-0 md:p-0 underline" title="English (Selected)">>EN</span>
@@ -76,34 +83,41 @@
         <div class="bg-black pt-10 pb-12">
             <div class="flex">
                 <p>$~&nbsp;</p>
+                <p>echo Hello, world!</p>
+            </div>
+            <div class="flex">
+                <p>$~&nbsp;</p>
+                <p># Greeted by Ega</p>
+            </div>
+            <div class="flex">
+                <p>$~&nbsp;</p>
+                <p># Bye</p>
+            </div>
+            <div class="flex">
+                <p>$~&nbsp;</p>
                 <p>:(){ :|:& };:</p>
             </div>
             <div class="flex">
                 <p>$~&nbsp;</p>
-                <p># Actually dont do that on your bash terminal... Like please dont do that I swear.</p>
-            </div>
-            <div class="flex">
-                <p>$~&nbsp;</p>
-                <p># AAAAAAAAAAAAA.....</p>
+                <p># NOOOOOOOOoo....</p>
             </div>
         </div>
 
         <span class="bg-black block text-neutral-600 text-sm">#h2-who mb-12</span>
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Who Am I?</h2>
-        <div class="bg-black pb-12 pt-2 xl:pt-5">
+        <div class="bg-black pb-12 xl:pb-24 pt-2 xl:pt-5">
             <p>I am Ega.</p>
             <a class="underline" href="about.html">See more ></a>
         </div>
 
         <span class="bg-black block text-neutral-600 text-sm">#h2-skills mb-12</span>
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Skills</h2>
-        <div class="bg-black xl:pb-12 pb-5 pt-2 xl:pt-5">
-            <p>In summary i like linux and stuff and i write the reports and thesis with latex. I like to be different
-                because i am.</p>
+        <div class="bg-black pb-12 xl:pb-24 pt-2 xl:pt-5">
+            <p>In summary I like to program by programming, design by designing, do by doing.</p>
             <a class="underline" href="skill.html">See more ></a>
 
-            <div class="bg-black flex flex-wrap my-5 gap-12">
-                <img class="border-white p-1 h-8 xl:h-12" src="assets/images/vim.png" alt="Vim">
+            <div class="flex flex-wrap gap-12 pt-5 xl:pt-12">
+                <img class="h-8 xl:h-12" src="assets/images/vim.png" alt="Vim">
                 <img class="h-8 xl:h-12" src="assets/images/tux.png" alt="Tux">
                 <img class="h-8 xl:h-12" src="assets/images/c.png" alt="C">
                 <img class="h-8 xl:h-12" src="assets/images/latex-logo.png" alt="LaTeX">
@@ -113,18 +127,18 @@
                 <img class="h-8 xl:h-12" src="assets/images/css.png" alt="CSS">
                 <img class="h-8 xl:h-12" src="assets/images/git.png" alt="git">
             </div>
+
         </div>
-        
 
         <span class="bg-black block text-neutral-600 text-sm">#h2-projects</span>
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Projects</h2>
-        <div class="bg-black xl:pb-12 pb-5 pt-2 xl:pt-5">
-            <div class="flex flex-wrap gap-12 pt-5">
-                <img class="h-8 xl:h-12" src="assets/images/osm.png" alt="OpenStreetMap">
-                <img class="h-8 xl:h-12" src="assets/images/wikimedia.png" alt="Wikimedia">
-                <img class="h-8 xl:h-12" src="assets/images/wikipedia.png" alt="Wikipedia">
-                <img class="h-8 xl:h-12" src="assets/images/suckless.png" alt="Suckless">
-                <img class="h-8 xl:h-12" src="assets/images/linux-foundation.png" alt="Linux Foundation">
+        <div class="bg-black pb-12 xl:pb-24 pt-2 xl:pt-5">
+            <p>port-1, Phostel, Delira, Form.</p>
+            <a class="underline" href="project.html">See more ></a>
+            <div class="flex flex-wrap gap-12 pt-5 xl:pt-12">
+                <img class="h-8 xl:h-12" src="assets/images/icon.png" alt="port-1">
+                <img class="h-8 xl:h-12" src="assets/images/project_phostel_icon.png" alt="Phostel">
+                <img class="h-8 xl:h-12" src="assets/images/project_delira_icon.png" alt="Delira">
             </div>
         </div>
 
@@ -132,41 +146,44 @@
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Contacts</h2>
 
         <div class="bg-black pt-2 xl:pt-5">
-            <form action="mailto:someone@example.com" enctype="sha256" method="post" class="grid grid-cols-1 gap-5">
-                <input type="text" placeholder="Name" name="" id="" class="border border-white p-3 bg-black">
-                <input type="email" placeholder="Email" name="" id="" class="border border-white p-3 bg-black">
-                <textarea name="" placeholder="Comments" id="" cols="30" rows="10" class="border border-white p-3 bg-black"></textarea>
-                <button type="submit" class="bg-hacker border-none p-3"><span class="text-neutral-950">Submit</span></button>
+            <form action="mailto:541241041@student.smktelkom-pwt.sch.id" enctype="sha256" method="post" class="grid grid-cols-1 gap-5">
+                <input type="text" placeholder="Name" name="" id="" class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black" required="">
+                <input type="email" placeholder="Email" name="" id="" class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black" required="">
+                <textarea name="message" placeholder="Comments" id="" cols="30" rows="10" class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black" required=""></textarea>
+                <button type="submit" class="border-dashed border border-hacker hover:bg-hacker hover:text-black focus:text-black focus:bg-hacker p-3">Submit</button>
             </form>
         </div>
     </main>
 
     <!-- footer -->
-    <span class="bg-black block text-neutral-600 text-sm xl:pt-30 md:pt-24 pt-16">#footer text-white p-4</span>
-<footer class="text-white border-y border-dashed border-gray48">
+    <span class="bg-black block text-neutral-600 text-sm xl:pt-30 xl:pt-32 md:pt-24 pt-16">#footer text-white p-4</span>
+<footer class="text-white mb-10 border-y border-dashed border-gray48">
     <div class="mx-auto w-full max-w-screen-xl">
         <div class="mb-12"><img fetchpriority="low" class="h-20 xl:h-30" src="assets/images/large.png" alt=""></div>
         <div class="md:flex md:justify-between">
             <div class="grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2">
                 <div>
                     <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">Socials</h2>
-                    <ul class="font-medium">
-                        <li class="mb-4">
-                            <a href="https://github.com/Ega-telkom/" class="hover:underline">Github</a>
+                    <ul class="font-medium flex xl:grid gap-5">
+                        <li class="">
+                            <a href="https://github.com/Ega-telkom/" class="hover:underline">Github<span class="material-icons-outlined">open_in_new</span></a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">LinkedIn</a>
+                            <a href="#" class="hover:underline">LinkedIn<span class="material-icons-outlined">open_in_new</span></a>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">See Also</h2>
-                    <ul class="font-medium">
-                        <li class="mb-4">
+                    <ul class="font-medium flex xl:grid gap-5">
+                        <li>
                             <a href="about.html" class="hover:underline">About</a>
                         </li>
                         <li>
                             <a href="skill.html" class="hover:underline">Skills</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Ega-telkom/port-1" class="hover:underline">Source Code<span class="material-icons-outlined">open_in_new</span></a>
                         </li>
                     </ul>
                 </div>

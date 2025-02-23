@@ -11,6 +11,7 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/output.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons/material-icons.css">
 
     <!-- scripts -->
     <script src="assets/js/flowbite.min.js" defer></script>
@@ -47,34 +48,41 @@
         <div class="bg-black pt-10 pb-12">
             <div class="flex">
                 <p>$~&nbsp;</p>
+                <p>echo Hello, world!</p>
+            </div>
+            <div class="flex">
+                <p>$~&nbsp;</p>
+                <p># Greeted by Ega</p>
+            </div>
+            <div class="flex">
+                <p>$~&nbsp;</p>
+                <p># Bye</p>
+            </div>
+            <div class="flex">
+                <p>$~&nbsp;</p>
                 <p>:(){ :|:& };:</p>
             </div>
             <div class="flex">
                 <p>$~&nbsp;</p>
-                <p># Actually dont do that on your bash terminal... Like please dont do that I swear.</p>
-            </div>
-            <div class="flex">
-                <p>$~&nbsp;</p>
-                <p># AAAAAAAAAAAAA.....</p>
+                <p># NOOOOOOOOoo....</p>
             </div>
         </div>
 
         <span class="bg-black block text-neutral-600 text-sm">#h2-who mb-12</span>
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Who Am I?</h2>
-        <div class="bg-black pb-12 pt-2 xl:pt-5">
+        <div class="bg-black pb-12 xl:pb-24 pt-2 xl:pt-5">
             <p>I am Ega.</p>
             <a class="underline" href="about.html">See more ></a>
         </div>
 
         <span class="bg-black block text-neutral-600 text-sm">#h2-skills mb-12</span>
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Skills</h2>
-        <div class="bg-black xl:pb-12 pb-5 pt-2 xl:pt-5">
-            <p>In summary i like linux and stuff and i write the reports and thesis with latex. I like to be different
-                because i am.</p>
+        <div class="bg-black pb-12 xl:pb-24 pt-2 xl:pt-5">
+            <p>In summary I like to program by programming, design by designing, do by doing.</p>
             <a class="underline" href="skill.html">See more ></a>
 
-            <div class="bg-black flex flex-wrap my-5 gap-12">
-                <img class="border-white p-1 h-8 xl:h-12" src="assets/images/vim.png" alt="Vim">
+            <div class="flex flex-wrap gap-12 pt-5 xl:pt-12">
+                <img class="h-8 xl:h-12" src="assets/images/vim.png" alt="Vim">
                 <img class="h-8 xl:h-12" src="assets/images/tux.png" alt="Tux">
                 <img class="h-8 xl:h-12" src="assets/images/c.png" alt="C">
                 <img class="h-8 xl:h-12" src="assets/images/latex-logo.png" alt="LaTeX">
@@ -84,18 +92,18 @@
                 <img class="h-8 xl:h-12" src="assets/images/css.png" alt="CSS">
                 <img class="h-8 xl:h-12" src="assets/images/git.png" alt="git">
             </div>
-        </div>
+
         </div>
 
         <span class="bg-black block text-neutral-600 text-sm">#h2-projects</span>
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Projects</h2>
-        <div class="bg-black xl:pb-12 pb-5 pt-2 xl:pt-5">
-            <div class="flex flex-wrap gap-12 pt-5">
-                <img class="h-8 xl:h-12" src="assets/images/osm.png" alt="OpenStreetMap">
-                <img class="h-8 xl:h-12" src="assets/images/wikimedia.png" alt="Wikimedia">
-                <img class="h-8 xl:h-12" src="assets/images/wikipedia.png" alt="Wikipedia">
-                <img class="h-8 xl:h-12" src="assets/images/suckless.png" alt="Suckless">
-                <img class="h-8 xl:h-12" src="assets/images/linux-foundation.png" alt="Linux Foundation">
+        <div class="bg-black pb-12 xl:pb-24 pt-2 xl:pt-5">
+            <p>port-1, Phostel, Delira, Form.</p>
+            <a class="underline" href="project.html">See more ></a>
+            <div class="flex flex-wrap gap-12 pt-5 xl:pt-12">
+                <img class="h-8 xl:h-12" src="assets/images/icon.png" alt="port-1">
+                <img class="h-8 xl:h-12" src="assets/images/project_phostel_icon.png" alt="Phostel">
+                <img class="h-8 xl:h-12" src="assets/images/project_delira_icon.png" alt="Delira">
             </div>
         </div>
 
@@ -103,13 +111,12 @@
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"># Contacts</h2>
 
         <div class="bg-black pt-2 xl:pt-5">
-            <form action="mailto:someone@example.com" enctype="sha256" method="post" class="grid grid-cols-1 gap-5">
-                <input type="text" placeholder="Name" name="" id="" class="border border-white p-3 bg-black">
-                <input type="email" placeholder="Email" name="" id="" class="border border-white p-3 bg-black">
-                <textarea name="" placeholder="Comments" id="" cols="30" rows="10"
-                    class="border border-white p-3 bg-black"></textarea>
-                <button type="submit" class="bg-hacker border-none p-3"><span
-                        class="text-neutral-950">Submit</span></button>
+            <form action="mailto:541241041@student.smktelkom-pwt.sch.id" enctype="sha256" method="post" class="grid grid-cols-1 gap-5">
+                <input type="text" placeholder="Name" name="" id="" class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black" required>
+                <input type="email" placeholder="Email" name="" id="" class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black" required>
+                <textarea name="message" placeholder="Comments" id="" cols="30" rows="10"
+                    class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black" required></textarea>
+                <button type="submit" class="border-dashed border border-hacker hover:bg-hacker hover:text-black focus:text-black focus:bg-hacker p-3">Submit</button>
             </form>
         </div>
     </main>
