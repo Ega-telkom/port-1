@@ -17,14 +17,20 @@ document.getElementById('greetings').textContent = getRandomWord();
 document.getElementById('shell').textContent = getRandomShell();
 
 const basePath = window.location.pathname.startsWith('/port-1/') ? '/port-1/' : '/';
+const AsciinemaSkeleton = document.getElementById('asciinema-skeleton');
+const startTime = Date.now();
+const lava = document.getElementById('lava');
+lava.style.display = 'none';
 
-document.fonts.load("1em IBM Plex Mono").then(() => {
-    AsciinemaPlayer.create(`${basePath}assets/misc/lavat.cast`, document.getElementById('lava'), {
-      terminalFontFamily: "'IBM Plex Mono', monospace",
-      loop: true,
-      autoPlay: true,
-      controls: false,
-      fit: false,
-    });
-  })
-  
+const player = AsciinemaPlayer.create(`${basePath}assets/misc/lavat.cast`, lava, {
+  terminalFontFamily: "'IBM Plex Mono', monospace",
+  loop: true,
+  autoPlay: true,
+  controls: false,
+  fit: false,
+});
+
+player.addEventListener('playing', () => {
+  AsciinemaSkeleton.remove();
+  lava.style.display = 'block';
+});
