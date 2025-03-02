@@ -17,7 +17,7 @@ document.getElementById('greetings').textContent = getRandomWord();
 document.getElementById('shell').textContent = getRandomShell();
 
 document.fonts.load("1em IBM Plex Mono").then(() => {
-    AsciinemaPlayer.create('/assets/misc/lavat.cast', document.getElementById('lava'), {
+    AsciinemaPlayer.create('port-1/assets/misc/lavat.cast', document.getElementById('lava'), {
       terminalFontFamily: "'IBM Plex Mono', monospace",
       loop: true,
       autoPlay: true,
