@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
 
     <!-- icon -->
     <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
@@ -37,7 +38,7 @@
         </button>
 
         <!-- navbar menu -->
-        <div class="mt-5 md:mt-0 hidden w-full md:block md:w-auto" id="navbar-default">
+        <div class="mt-5 flex md:mt-0 hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="gap-3 font-medium flex flex-col md:p-0 mt-0 md:gap-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 <li>
                     <a class="bg-hacker hover:underline primary text-neutral-950" href="assets/misc/CV.pdf">Download CV</a>
@@ -88,7 +89,39 @@
                 <p>
                     I do my computing on my Laptop and If I ever feel free maybe my Computer at home. My main OSes I like are mostly UNIX-Like. Like GUN.. I mean, GNU/Linux, the flavours of Linux. And to be specific, and what distribution I use is Arch Linux, for my Computer at home, and Fedora Workstation XX for my laptop. <i>Note: XX means Fedora ships major version every 6 months I think</i>. I also dualboot with Microsoft® Windows 11 on my Computer and Windows 10 on my laptop, just in case. 
                 </p>
-            </div>    
+            </div>
+            
+            <h3 class="text-2xl xl:text-3xl pt-8 xl:pt-12">### Education</h3>
+            <div class="pt-4 xl:pt-5 pl-5 pr-5">
+                <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                    <li class="mb-10 ms-4">
+                        <div class="absolute w-3 h-3 bg-gray-200 mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time class="mb-1 font-normal leading-none text-white">2015</time>
+                        <h3 class="text-white mb-2">Kidergarten</h3>
+                        <p class="text-base font-normal text-white">I was around 5-7yo, Like a normal person you go to kindergarten, or preschool, or whatever that is.</p>
+                    <path stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M1 5h12m0 0L9 1m4 4L9 9">
+                
+                    </path></li>
+                    <li class="mb-10 ms-4">
+                        <div class="absolute w-3 h-3 bg-gray-200 mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time class="mb-1 font-normal leading-none text-white">2021</time>
+                        <h3 class="text-white mb-2">Elementary</h3>
+                        <p class="text-base font-normal text-white">Elementary schools was a normal one for me. I didn't achieve anything big.</p>
+                    </li>
+                    <li class="mb-10 ms-4">
+                        <div class="absolute w-3 h-3 bg-gray-200 mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time class="mb-1 font-normal leading-none text-white">2024</time>
+                        <h3 class="text-white mb-2">SMP 2 Negeri Purworejo</h3>
+                        <p class="text-base font-normal text-white">Was different but overall its very normal. I became a journalist <i>(sort of)</i> as part of my extras, other than that I didn't achieve anything big.</p>
+                    </li>
+                    <li class="mb-10 ms-4">
+                        <div class="absolute w-3 h-3 bg-gray-200 mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time class="mb-1 font-normal leading-none text-white">Now</time>
+                        <h3 class="text-white mb-2">SMK Telkom Purwokerto</h3>
+                        <p class="text-base font-normal text-white">Ongoing...</p>
+                    </li>
+                </ol>
+            </div> 
         </div>
 
         <h2 class="text-3xl xl:text-4xl border-b border-dashed border-gray48">## Heading 2</h2>
@@ -100,7 +133,7 @@
             <h3 class="text-2xl xl:text-3xl pt-8 xl:pt-12">### Heading 3</h3>
             <div class="pt-4 xl:pt-5">
                 <p>
-                    What a jerk that Heading 2 are saying that to me?! Though I agree I can't yap as much and I'm small. Anyways welcome to Heading 3! Probably that's what I can do to make this page long enough.
+                    What a jerk of Heading 2 are saying that to me?! Though I agree I can't yap as much and I'm small. Anyways welcome to Heading 3! Probably that's what I can do to make this page long enough.
                 </p>
             </div>
         </div>
@@ -150,9 +183,12 @@
             </div>
         </div>
         <hr class="my-6 border-neutral-950 sm:mx-auto lg:my-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm sm:text-center">(C) 2025 <a href="#" class="hover:underline">Ega(TM)</a>. All Rights Reserved.
-            </span>
+        <div class="grid border-t border-dashed border-gray48">
+            <div class="box bg-hacker"><span class="text-sm text-black sm:text-center">(C) 2025 <a href="#" class="hover:underline">Ega(TM)</a>. All Rights Reserved. </span></div>
+            <div class="box bg-black">&nbsp;</div>
+            <div class="box bg-gray24">&nbsp;</div>
+            <div class="box bg-gray48">&nbsp;</div>
+            <div class="box bg-white">&nbsp;</div>
         </div>
     </div>
 </footer>

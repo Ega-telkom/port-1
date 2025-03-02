@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
 
     <!-- icon -->
     <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
@@ -18,7 +19,7 @@
     <script src="assets/js/script.js" defer=""></script>
 
     <!-- title -->
-    <title>Ega - About</title>
+    <title>Ega - Projects</title>
 </head>
 
 <body class="max-w-7xl mx-auto text-neutral-100 border-x border-[#484848]">
@@ -37,7 +38,7 @@
         </button>
 
         <!-- navbar menu -->
-        <div class="mt-5 md:mt-0 hidden w-full md:block md:w-auto" id="navbar-default">
+        <div class="mt-5 flex md:mt-0 hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="gap-3 font-medium flex flex-col md:p-0 mt-0 md:gap-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 <li>
                     <a class="bg-hacker hover:underline primary text-neutral-950" href="assets/misc/CV.pdf">Download CV</a>
@@ -67,7 +68,7 @@
     <main class="bg-black border-t border-dashed border-[#484848]">
 
         <div class="bg-black pb-5 xl:pb-10">
-            <img fetchpriority="high" class="w-full object-cover" src="assets/images/project_current.png" alt="Banner">
+            <img fetchpriority="high" class="w-full xl:h-96 object-top object-cover" src="assets/images/project_current.png" alt="Banner">
         </div>
 
         <div class="flex gap-2 border-b border-dashed border-gray48">
@@ -76,7 +77,7 @@
         </div>
         <div class="pb-12 xl:pb-20 pt-4 xl:pt-8">
             <p>
-                I'm making this portfolio site for my midterm assessment, or maybe beyond that, who knows? Utilizes Node.js to build this simple static site, by making my own cli scripts which calls out tailwindcss and posthtml to build and watch my site. I'm making this website as light as possible in terms of performance, and responsive enough to make it readable. In terms of accessibility maybe it needs some improvement.
+                I'm making this portfolio site for my midterm assessment, or maybe beyond that, who knows? Utilizes Node.js to build this simple static site, by making my own cli scripts which calls out tailwindcss and posthtml to build and watch my site. I'm making this website as light as possible in terms of performance, maybe a bit bloated due to asciinema-player but hey a little overhead won't do much, and responsive enough to make it readable. In terms of accessibility maybe it needs some improvement. Compatibility friendly in mind, <i>should</i> support (but not limited to) Chromium, Gecko (Firefox), webkit-based engines.
             </p>
 
             <div class="pt-4 xl:pt-5">
@@ -174,9 +175,12 @@
             </div>
         </div>
         <hr class="my-6 border-neutral-950 sm:mx-auto lg:my-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm sm:text-center">(C) 2025 <a href="#" class="hover:underline">Ega(TM)</a>. All Rights Reserved.
-            </span>
+        <div class="grid border-t border-dashed border-gray48">
+            <div class="box bg-hacker"><span class="text-sm text-black sm:text-center">(C) 2025 <a href="#" class="hover:underline">Ega(TM)</a>. All Rights Reserved. </span></div>
+            <div class="box bg-black">&nbsp;</div>
+            <div class="box bg-gray24">&nbsp;</div>
+            <div class="box bg-gray48">&nbsp;</div>
+            <div class="box bg-white">&nbsp;</div>
         </div>
     </div>
 </footer>
