@@ -16,8 +16,10 @@ function getRandomShell() {
 document.getElementById('greetings').textContent = getRandomWord();
 document.getElementById('shell').textContent = getRandomShell();
 
+const basePath = window.location.pathname.startsWith('/port-1/') ? '/port-1/' : '/';
+
 document.fonts.load("1em IBM Plex Mono").then(() => {
-    AsciinemaPlayer.create('assets/misc/lavat.cast', document.getElementById('lava'), {
+    AsciinemaPlayer.create(`${basePath}assets/misc/lavat.cast`, document.getElementById('lava'), {
       terminalFontFamily: "'IBM Plex Mono', monospace",
       loop: true,
       autoPlay: true,
