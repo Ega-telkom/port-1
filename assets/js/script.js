@@ -1,4 +1,4 @@
-const words = ["Corrected Correctness", "Indie Indeed", "Worse is better"];
+const words = ["un·\u200Bcon·\u200Bven\u200Btion·\u200Bal", "Indie·\u200BIndeed", "Worse is better"];
 const shell = [">", "$", "]", "_", "%", "#"];
 
 // Function to get a random word
@@ -16,13 +16,15 @@ function getRandomShell() {
 document.getElementById('greetings').textContent = getRandomWord();
 document.getElementById('shell').textContent = getRandomShell();
 
+//Asciinema
 const basePath = window.location.pathname.startsWith('/port-1/') ? '/port-1/' : '/';
-const AsciinemaSkeleton = document.getElementById('asciinema-skeleton');
-const startTime = Date.now();
+const lavaPath = `${basePath}assets/misc/lavat.cast`;
+const lavaSkel = document.getElementById('lava-skeleton');
 const lava = document.getElementById('lava');
+
 lava.style.display = 'none';
 
-const player = AsciinemaPlayer.create(`${basePath}assets/misc/lavat.cast`, lava, {
+const player = AsciinemaPlayer.create(lavaPath, lava, {
   terminalFontFamily: "'IBM Plex Mono', monospace",
   loop: true,
   autoPlay: true,
@@ -31,6 +33,6 @@ const player = AsciinemaPlayer.create(`${basePath}assets/misc/lavat.cast`, lava,
 });
 
 player.addEventListener('playing', () => {
-  AsciinemaSkeleton.remove();
+  lavaSkel.remove();
   lava.style.display = 'block';
 });
