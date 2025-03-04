@@ -28,7 +28,7 @@
 <body class="max-w-7xl mx-auto text-neutral-100 border-x border-gray48">
 
     <!-- bar navigasi -->
-    <include src="components/id/navbar.html" locals='{ "currentPage": "index.html" }'></include>
+    <include src="components/id/navbar.html" locals='{ "currentPage": "" }'></include>
 
     <!-- konten -->
     <span class="block text-neutral-600 text-sm">#main</span>
@@ -139,15 +139,10 @@
         <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="kontak" class="hover:underline focus:underline" href="#kontak"># Kontak &#8595;&#8595;</a></h2>
 
         <div class="bg-black pt-2 xl:pt-5">
-            <form action="https://formspree.io/f/xyzkabnd" method="POST" class="grid grid-cols-1 gap-5">
-                <input type="email" placeholder="Email" name="" id=""
-                    class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black"
-                    required>
-                <textarea name="message" placeholder="Pesan..." id="" cols="30" rows="10"
-                    class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black"
-                    required></textarea>
-                <button type="submit"
-                    class="border-dashed border border-hacker hover:bg-hacker hover:text-black focus:text-black focus:bg-hacker p-3">Kirim</button>
+            <form id="form" class="grid grid-cols-1 gap-5">
+                <input type="email" placeholder="Email" id="498696631" name="entry.498696631" class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black" required>
+                <textarea placeholder="Pesan..." id="223126343" name="entry.223126343" cols="30" rows="10" class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black" required></textarea>
+                <button type="submit" class="border-dashed border border-hacker hover:bg-hacker hover:text-black focus:text-black focus:bg-hacker p-3">Kirim</button>
             </form>
         </div>
         

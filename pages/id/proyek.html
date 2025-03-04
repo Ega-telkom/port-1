@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="p-2">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+
+    <!-- icon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/icon.png">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/output.css">
+    <link rel="stylesheet" href="../assets/styles/leaflet.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons/material-icons.css">
+
+    <!-- scripts -->
+    <script src="../assets/js/flowbite.min.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
+    <script src="../assets/js/leaflet.js"></script>
+
+    <!-- title -->
+    <title>Ega - Proyek</title>
+</head>
+
+<body class="max-w-7xl mx-auto text-neutral-100 border-x border-gray48">
+
+    <!-- navigation bar -->
+    <include src="components/id/navbar.html" locals='{ "currentPage": "project.html" }'></include>
+
+    <!-- content -->
+    <span class="block text-neutral-600 text-sm">#main</span>
+    <main class="bg-black border-t border-dashed border-gray48">
+
+        <div class="bg-black pb-5 xl:pb-10">
+            <img fetchpriority="high" class="w-full xl:h-96 object-top object-cover" src="../assets/images/project_current.png" alt="Banner">
+        </div>
+
+        <div class="flex gap-2 border-b border-dashed border-gray48">
+            <h1 class="text-4xl xl:text-7xl"><a name="port-1" class="hover:underline focus:underline" href="#port-1"># port-1</a></h1>
+            <img fetchpriority="high" class="h-6 xl:h-10" src="../assets/images/icon.png" alt="Banner">
+        </div>
+        <div class="pb-12 xl:pb-20 pt-4 xl:pt-8">
+            <p>
+                Menggunakan Node.js untuk membangun situs statis sederhana ini, dengan menulis skrip <i>cli</i>-ku dengan memanggil tailwindcss dan posthtml untuk membangun dan mengawasi situsku. Aku membuat situs web ini seringan mungkin dalam hal performanya, mungkin sedikit kembung karena asciinema-player tetapi sedikit <i>overhead</i> tidak akan mengaruh, dan cukup responsif agar dapat dibaca. Dalam hal aksesibilitas dalam pendapatku butuh peningkatan. Ramah kompatibilitas, seharusnya kompatibel dengan (dan tidak terbatas dari) Chromium, Gecko (Firefox), mesin basis-webkit.
+            </p>
+
+            <div class="pt-4 xl:pt-5">
+                <a href="https://ega-telkom.github.io/port-1" target="_blank" rel="noopener noreferrer"
+                    class="underline">Situs<span class="material-icons-outlined">open_in_new</span></a>
+                <a href="https://github.com/Ega-telkom/port-1" target="_blank" rel="noopener noreferrer"
+                    class="underline">Sumber Kode<span class="material-icons-outlined">open_in_new</span></a>
+            </div>
+        </div>
+
+        <div class="flex gap-2 border-b border-dashed border-gray48">
+            <h2 class="text-3xl xl:text-4xl"><a name="phostel" class="hover:underline focus:underline" href="#phostel">## Phostel</a></h2>
+            <img fetchpriority="high" class="h-6" src="../assets/images/project_phostel_icon.png" alt="Banner">
+        </div>
+        <div class="pb-12 xl:pb-20 pt-4 xl:pt-5">
+            <div class="bg-black pb-3 xl:pb-8">
+                <img class="md:h-96 w-full object-top object-cover" src="../assets/images/project_phostel.png"
+                    alt="Banner">
+            </div>
+            <p>
+                Yang satu ini untuk ujian tengah semester kelompok saya, serta proposal saya untuk penilaian akhir. Ini adalah situs web non-statis pertama yang ingin saya buat. Terinspirasi dari Flickr, Unsplash, Pinterest, dan tempat repositori gambar lainnya di internet. Saya akan mengerjakan bagian frontend, dan teman-teman saya yang lain akan mengerjakan bagian backend dan pemasaran. 
+            </p>
+            <div class="pt-4 xl:pt-5">
+                <a href="https://www.figma.com/design/06Vl3b0rbye1c2PL64vWi5/Untitled?node-id=0-1&t=PuBFvAl4ekkQS1TB-1"
+                    target="_blank" rel="noopener noreferrer" class="underline">Figma<span
+                        class="material-icons-outlined">open_in_new</span></a>
+                <a href="https://drive.google.com/file/d/1J54KEJ6_oapi6UxT0Wp4KPlgqM8_4f-6/view?usp=sharing"
+                    target="_blank" rel="noopener noreferrer" class="underline">draw.io<span
+                        class="material-icons-outlined">open_in_new</span></a>
+            </div>
+        </div>
+
+        <div class="flex gap-2 border-b border-dashed border-gray48">
+            <h2 class="text-3xl xl:text-4xl"><a name="delira" class="hover:underline focus:underline" href="#delira">## Delira</a></h2>
+            <img fetchpriority="high" class="h-6" src="../assets/images/project_delira_icon.png" alt="Banner">
+        </div>
+        <div class="pb-12 xl:pb-20 pt-4 xl:pt-5">
+            <div class="bg-black pb-3 xl:pb-8">
+                <img class="md:h-96 w-full object-top object-cover" src="../assets/images/project_delira.png" alt="Banner">
+            </div>
+            <p>
+                Delira, yang merupakan singkatan dari inisial nama-nama kami dalam grup. Ini adalah proyek kolaboratif yang menyatukan DPK-A, DPK-D, dan DPK-E secara bersamaan. Kami terinspirasi oleh mamikos. Sebuah situs web sewa kos yang ada di Indonesia. 
+            </p>
+        </div>
+
+        <h2 class="text-3xl xl:text-4xl border-b border-dashed border-gray48"><a name="form" class="hover:underline focus:underline" href="#form">## Form</a></h2>
+        <div class="pt-4 xl:pt-5">
+            <div class="bg-black pb-3 xl:pb-8">
+                <img class="md:h-96 w-full object-top object-cover" src="../assets/images/project_form.png" alt="Banner">
+            </div>
+            <p>
+                Ini adalah situs statis pertama saya yang hanya menggunakan HTML dan CSS. Ini adalah situs formulir yang sederhana dan tidak fungsional. Ini dibuat karena saya diperkenalkan dengan elemen HTML5 sederhana, dan cara kerja stylesheet, meskipun saya sudah tahu sedikit. Saya menaruh lelucon satir di situs itu supaya tidak ada yang membacanya.
+            </p>
+            <div class="pt-4 xl:pt-5">
+                <a href="https://greneboy.github.io/form/" target="_blank" rel="noopener noreferrer"
+                    class="underline">Situs<span class="material-icons-outlined">open_in_new</span></a>
+                <a href="https://github.com/greneboy/form" target="_blank" rel="noopener noreferrer"
+                    class="underline">Sumber Kode<span class="material-icons-outlined">open_in_new</span></a>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- footer -->
+    <include src="components/id/footer.html"></include>
+
+</body>
+
+</html>

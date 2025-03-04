@@ -1,8 +1,10 @@
+const basePath = window.location.pathname.startsWith('/port-1/') ? '/port-1/' : '/';
+
 // Maps
 var map = L.map('map').setView([-7.435167, 109.250249], 9);
 
 var myIcon = L.icon({
-    iconUrl: '../assets/images/logo.png',
+    iconUrl: `${basePath}assets/images/logo.png`,
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [-3, -76],
@@ -33,8 +35,6 @@ function getRandomShell() {
 document.getElementById('greetings').textContent = getRandomWord();
 document.getElementById('shell').textContent = getRandomShell();
 
-const basePath = window.location.pathname.startsWith('/port-1/') ? '/port-1/' : '/';
-
 // Asciinema
 const lavaPath = `${basePath}assets/misc/lavat.cast`;
 const lavaSkel = document.getElementById('lava-skeleton');
@@ -53,4 +53,20 @@ const player = AsciinemaPlayer.create(lavaPath, lava, {
 player.addEventListener('playing', () => {
   lavaSkel.remove();
   lava.style.display = 'block';
+});
+
+document.getElementById("form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  let formData = new FormData(this);
+
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSf6TsctTiQrhKr7o043QziHCxvcOZXJODe6fYilOSn4f0BsYQ/formResponse", {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+  }).then(() => {
+      alert("Form submitted, thanks :D!");
+  }).catch(() => {
+      alert("How did you manage to fail to submit?!");
+  });
 });
