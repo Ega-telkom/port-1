@@ -1,181 +1,161 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="p-2">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/port-1/">
 
     <!-- ikon -->
     <link rel="icon" type="image/x-icon" href="../assets/icon.png">
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/output.css">
+    <link rel="stylesheet" href="../assets/styles/asciinema-player.css">
+    <link rel="stylesheet" href="../assets/styles/leaflet.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons/material-icons.css">
 
     <!-- script -->
-    <script src="script.js" defer></script>
-    <script src="../flowbite.min.js" defer></script>
+    <script src="../assets/js/script-id.js" defer></script>
+    <script src="../assets/js/flowbite.min.js" defer></script>
+    <script src="../assets/js/asciinema-player.min.js"></script>
+    <script src="../assets/js/leaflet.js"></script>
 
     <!-- judul -->
     <title>Ega - Beranda</title>
 </head>
 
-<body class="max-w-7xl mx-auto text-neutral-100 bg-black p-5">
+<body class="max-w-7xl mx-auto text-neutral-100 border-x border-gray48">
 
     <!-- bar navigasi -->
-    <nav class="bg-black mt-5 mb-8">
-        <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto">
-            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="../assets/logo.png" alt="Logo" class="h-5">
-            </a>
-
-            <!-- menu hamburger -->
-            <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center justify-center text-sm md:hidden aria-controls=" navbar-default"
-                aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <img class="h-5" src="../assets/menu.png" alt="">
-            </button>
-
-            <!-- menu nav bar-->
-            <div class="hidden w-full md:block md:w-auto menu" id="navbar-default">
-                <ul
-                    class="gap-3 md:gap-0 font-medium flex flex-col md:p-0 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
-                    <li>
-                        <a class="bg-primary hover:underline text-neutral-950" href="../assets/CV.pdf">Unduh CV</a>
-                    </li>
-                    <li>
-                        <a href="halhal.html" class="block md:border-0 md:p-0 hover:underline">Hal-hal</a>
-                    </li>
-                    <li>
-                        <a href="tentang.html" class="block md:border-0 md:p-0 hover:underline">Tentang</a>
-                    </li>
-                    <li>
-                        <a href="../index.html" class="md:border-0 md:p-0 hover:underline" title="English">EN</a>
-                        <span class="md:border-0 md:p-0">/</span>
-                        <span class="md:border-0 md:p-0 underline" title="Bahasa Indonesia (Terpilih)">>ID</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <include src="components/id/navbar.html" locals='{ "currentPage": "index.html" }'></include>
 
     <!-- konten -->
-    <main class="">
-        <div class="mb-10">
-            <img fetchpriority="high" class="w-full object-cover h-48 mb-2" src="../assets/banner.webp" alt="Banner">
-            <p class="text-wrap">> r/ultrawidemasterrace</p>
+    <span class="block text-neutral-600 text-sm">#main</span>
+    <main class="main border-t border-dashed border-gray48">
+
+        <span class="bg-black block text-neutral-600 text-sm">#banner mb-10</span>
+        <div class="bg-black pb-10">
+            <img fetchpriority="high" class="w-full object-cover h-32 xl:h-48 mb-2" src="../assets/images/banner.png"
+                alt="Banner">
         </div>
 
-        <div class="mb-10 md:mb-20 flex">
-            <h2 id="shell" class="text-4xl md:text-8xl"></h2>
-            <h2 class="text-4xl md:text-8xl">&nbsp;</h2>
-            <h1 id="greetings" class="italic text-4xl md:text-8xl"></h1>
-            <img class="h-3 md:h-5 pl-2" src="../assets/logo.png" alt="Logo">
+        <span class="bg-black block text-neutral-600 text-sm">#h1-greet mb-10 xl:mb-20 flex</span>
+        <div class="flex border-y border-dashed border-gray48">
+            <span id="shell" class="text-4xl xl:text-7xl"></span>
+            <span class="text-4xl xl:text-7xl">&nbsp;</span>
+            <span id="greetings" class="italic text-4xl xl:text-7xl"></span>
+            <img class="h-5 xl:h-5 pl-2" src="../assets/images/logo.png" alt="Logo">
         </div>
 
-        <!-- lol -->
-        <div class="flex">
-            <p>$~&nbsp;</p>
-            <p>echo Halo, dunia!</p>
+        <!-- /bin/sh -->
+        <div class="bg-black pt-2 xl:pt-5">
+            <div class="h-64 xl:h-54 pt-2" id="lava-skeleton">&nbsp;<span class="text-hacker">$</span>&nbsp;<span class="cursor">&#9608;</span> <i class="text-neutral-600">Memuat...</i></div>
+            <div class="h-64 xl:h-54" id="lava"></div>
         </div>
 
-        <div class="flex">
-            <p>$~&nbsp;</p>
-            <p>Halo, dunia!</p>
+        <span class="bg-black block text-neutral-600 text-sm">#h2-who mb-12</span>
+        <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="tentang" class="hover:underline focus:underline" href="#tentang"># Siapakah Aku?</a></h2>
+        <div class="bg-black pb-12 xl:pb-24 p-2 xl:p-5">
+            <div class="flex mb-5">
+                <a class="active:decoration-wavy hover:decoration-wavy underline" href="tentang.html">/tentang.html ></a>
+            </div> 
+            <div class="grid xl:grid-cols-4 grid-cols-2 md:grid-cols-3 overflow-hidden gap-5 xl:gap-10">
+                <a href="https://github.com/Ega-telkom"
+                target="_blank" rel="noopener noreferrer" class="border border-dashed border-gray48 hover:border-solid focus:border-solid cursor-pointer">
+                    <img class="xl:h-8 h-6 mb-5" src="../assets/images/github.png" alt="Github">
+                    <p>Ega-telkom</p>
+                    <span class="underline">Github<span
+                        class="material-icons-outlined">open_in_new</span></span>
+                </a>
+                <a href="https://github.com/greneboy"
+                target="_blank" rel="noopener noreferrer" class="border border-dashed border-gray48 hover:border-solid focus:border-solid cursor-pointer">
+                    <img class="xl:h-8 h-6 mb-5" src="../assets/images/github.png" alt="Github">
+                    <p>greneboy</p>
+                    <span class="underline">Github<span
+                        class="material-icons-outlined">open_in_new</span></span>
+                </a>
+                <a href="https://www.linkedin.com/in/ega-natha-29469434b/"
+                target="_blank" rel="noopener noreferrer" class="border border-dashed border-gray48 hover:border-solid focus:border-solid cursor-pointer">
+                    <img class="xl:h-8 h-6 mb-5" src="../assets/images/linkedin.png" alt="LinkedIn">
+                    <p>Ega natha</p>
+                    <span class="underline">LinkedIn<span
+                        class="material-icons-outlined">open_in_new</span></span>
+                </a>
+                <a href="https://www.youtube.com/@Ega-y8k"
+                target="_blank" rel="noopener noreferrer" class="border border-dashed border-gray48 hover:border-solid focus:border-solid cursor-pointer">
+                    <img class="xl:h-8 h-6 mb-5" src="../assets/images/youtube.png" alt="YouTube">
+                    <p>@Ega-y8k</p>
+                    <span class="underline">YouTube<span
+                        class="material-icons-outlined">open_in_new</span></span>
+                </a>
+            </div>
         </div>
 
-        <div class="flex">
-            <p>$~&nbsp;</p>
-            <p># Salam dari Ega</p>
+        <span class="bg-black block text-neutral-600 text-sm">#h2-skills mb-12</span>
+        <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="keterampilan" class="hover:underline focus:underline" href="#keterampilan"># Keterampilan &#8595;</a></h2>
+        <div class="bg-black pb-12 xl:pb-24 p-2 xl:p-5">
+            <div class="flex pb-5">
+                <span>Intinya saya suka memprogram dengan memprogramnya, mendesain dengan mendesainnya, melakukan dengan melakukannya.</span>
+            </div>
+            <div>
+                <a class="active:decoration-wavy hover:decoration-wavy underline" href="keterampilan.html">/keterampilan.html ></a>
+                <div class="border border-dashed border-gray48 flex flex-wrap gap-12 mt-5">
+                    <img class="h-8 xl:h-12" src="../assets/images/vim.png" alt="Vim">
+                    <img class="h-8 xl:h-12" src="../assets/images/vscode.png" alt="Visual Studio Code">
+                    <img class="h-8 xl:h-12" src="../assets/images/archlinux.png" alt="Arch Linux">
+                    <img class="h-8 xl:h-12" src="../assets/images/tux.png" alt="Tux">
+                    <img class="h-8 xl:h-12" src="../assets/images/c.png" alt="C">
+                    <img class="h-8 xl:h-12" src="../assets/images/latex-logo.png" alt="LaTeX">
+                    <img class="h-8 xl:h-12" src="../assets/images/osm.png" alt="OpenSreetMap">
+                    <img class="h-8 xl:h-12" src="../assets/images/josm.png" alt="JOSM">
+                    <img class="h-8 xl:h-12" src="../assets/images/bash.png" alt="Bash">
+                    <img class="h-8 xl:h-12" src="../assets/images/html.png" alt="HTML5">
+                    <img class="h-8 xl:h-12" src="../assets/images/nodejs.png" alt="Node.js">
+                    <img class="h-8 xl:h-12" src="../assets/images/tailwind.png" alt="Tailwind CSS">
+                    <img class="h-8 xl:h-12" src="../assets/images/css.png" alt="CSS">
+                    <img class="h-8 xl:h-12" src="../assets/images/git.png" alt="git">
+                </div>        
+            </div>
         </div>
 
-        <div class="flex">
-            <p>$~&nbsp;</p>
-            <p># ...dan dia ingin mengekspresikan dirinya sebagaimanapun ke dunia dengan memantulkan suaranya di tty2
-            </p>
+        <span class="bg-black block text-neutral-600 text-sm">#h2-projects</span>
+        <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="proyek" class="hover:underline focus:underline" href="#proyek"># Proyek &#8595;</a></h2>
+        <div class="bg-black pb-12 xl:pb-24 p-2 xl:p-5">
+            <div class="flex pb-5">
+                <span>port-1, Phostel, Delira, Form.</span>
+            </div>
+            <div>
+                <a class="active:decoration-wavy hover:decoration-wavy underline" href="proyek.html">/proyek.html ></a>
+                <div class="border border-dashed border-gray48 flex flex-wrap gap-12 mt-5">
+                    <img class="h-8 xl:h-12" src="../assets/images/icon.png" alt="port-1">
+                    <img class="h-8 xl:h-12" src="../assets/images/project_phostel_icon.png" alt="Phostel">
+                    <img class="h-8 xl:h-12" src="../assets/images/project_delira_icon.png" alt="Delira">
+                </div>        
+            </div>
         </div>
 
-        <h2 class="mb-5 mt-12 text-3xl md:text-6xl"># Siapakah Aku?</h2>
-        <p>Aku adalah Ega.</p>
+        <span class="bg-black block text-neutral-600 text-sm">#h2-contact mb-12</span>
+        <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="kontak" class="hover:underline focus:underline" href="#kontak"># Kontak &#8595;&#8595;</a></h2>
 
-	
-        <h2 class="mb-5 mt-12 text-3xl md:text-6xl"># Keterampilan</h2>
-
-        <a class="mt-20 underline" href="keterampilan.html">Lihat lanjut ></a>
-	<div class="flex flex-wrap my-12 gap-12">
-		<img class="border-white p-1 h-8 md:h-12" src="../assets/vim.png" alt="Vim">
-		<img class="h-8 md:h-12" src="../assets/tux.png" alt="Tux">
-		<img class="h-8 md:h-12" src="../assets/c.png" alt="C">
-		<img class="h-8 md:h-12" src="../assets/latex-logo.png" alt="LaTeX">
-		<img class="h-8 md:h-12" src="../assets/osm.png" alt="OpenSreetMap">
-		<img class="h-8 md:h-12" src="../assets/bash.png" alt="Bash">
-		<img class="h-8 md:h-12" src="../assets/html.png" alt="HTML5">	
-		<img class="h-8 md:h-12" src="../assets/css.png" alt="CSS">
-		<img class="h-8 md:h-12" src="../assets/git.png" alt="git">
-	</div>
-
-        <h2 class="mb-5 mt-12 text-3xl md:text-6xl"># Klien</h2>
-
-	<div class="flex flex-wrap my-12 gap-12">
-		<img class="h-8 md:h-12" src="../assets/osm.png" alt="OpenStreetMap">
-		<img class="h-8 md:h-12" src="../assets/wikimedia.png" alt="Wikimedia">
-		<img class="h-8 md:h-12" src="../assets/wikipedia.png" alt="Wikipedia">
-		<img class="h-8 md:h-12" src="../assets/suckless.png" alt="Suckless">
-		<img class="h-8 md:h-12" src="../assets/linux-foundation.png" alt="Linux Foundation">
-	</div>
+        <div class="bg-black pt-2 xl:pt-5">
+            <form action="https://formspree.io/f/xyzkabnd" method="POST" class="grid grid-cols-1 gap-5">
+                <input type="email" placeholder="Email" name="" id=""
+                    class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black"
+                    required>
+                <textarea name="message" placeholder="Pesan..." id="" cols="30" rows="10"
+                    class="border hover:border-solid focus:border-solid border-dashed border-white p-3 bg-black"
+                    required></textarea>
+                <button type="submit"
+                    class="border-dashed border border-hacker hover:bg-hacker hover:text-black focus:text-black focus:bg-hacker p-3">Kirim</button>
+            </form>
+        </div>
+        
     </main>
 
     <!-- footer -->
-    <footer class="bg-primary text-neutral-950 mt-20 p-4">
-        <div class="mx-auto w-full max-w-screen-xl">
-            <div class="mb-12"><img fetchpriority="low" class="h-20" src="../assets/large.png"alt=""></div>
-            <div class="md:flex md:justify-between">
-                <div class="grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2">
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase">Sosial</h2>
-                        <ul class="font-medium">
-                            <li class="mb-4">
-                                <a href="https://github.com/greneboy/" class="hover:underline">Github</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Discord</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">LinkedIn</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase">Legal</h2>
-                        <ul class="font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Kebijakan Privasi</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Syarat &amp; Ketentuan</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase">Peta</h2>
-                        <iframe height="250" class="w-full" src="https://www.openstreetmap.org/export/embed.html?bbox=109.13990020751955%2C-7.495238810727947%2C109.36031341552736%2C-7.375405379038378&amp;layer=mapnik&amp;marker=-7.435326183423262%2C109.25010681152344"></iframe>
-                    </div>
-                    <div class="w-auto">
-                        <h2 class="mb-6 text-sm font-semibold uppercase">Alamat</h2>
-                        <p>SMP Telkom Purwokerto, Jalan Mayor Jenderal DI. Panjaitan, Teluk, Purwokerto, Banyumas, Central Java, Java, 53141</p>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-6 border-neutral-950 sm:mx-auto lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm sm:text-center">(C) 2025 <a href="#"
-                        class="hover:underline">Ega(TM)</a>. Hak Cipta Dilindungi. CC BY 4.0
-                </span>
-            </div>
-        </div>
-    </footer>
+    <include src="components/id/footer.html"></include>
+
 </body>
 
 </html>

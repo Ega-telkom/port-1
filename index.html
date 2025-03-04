@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/output.css">
     <link rel="stylesheet" href="assets/styles/asciinema-player.css">
+    <link rel="stylesheet" href="assets/styles/leaflet.css">
     <link rel="stylesheet" href="assets/fonts/material-icons/material-icons.css">
 
     <!-- scripts -->
     <script src="assets/js/flowbite.min.js" defer=""></script>
     <script src="assets/js/script.js" defer=""></script>
     <script src="assets/js/asciinema-player.min.js"></script>
+    <script src="assets/js/leaflet.js"></script>
 
     <!-- title -->
     <title>Ega - Home</title>
@@ -55,9 +57,9 @@
                     <a href="skill.html" class="block md:border-0 md:p-0 hover:underline navigation ">/skill</a>
                 </li>
                 <li>
-                    <span class="md:border-0 md:p-0 underline" title="English (Selected)">>EN</span>
-                    <span class="md:border-0 md:p-0">/</span>
-                    <a href="id/index.html" class="md:border-0 md:p-0 hover:underline" title="Bahasa Indonesia">ID</a>
+                    <span class="underline" title="English (Selected)">>EN</span>
+                    <span>/</span>
+                    <a href="id/index.html" class="hover:underline" title="Bahasa Indonesia">ID</a>
                 </li>
             </ul>
         </div>
@@ -125,7 +127,7 @@
                 <span>In summary I like to program by programming, design by designing, do by doing.</span>
             </div>
             <div>
-                <a class="underline" href="skill.html">/skill.html ></a>
+                <a class="active:decoration-wavy hover:decoration-wavy underline" href="skill.html">/skill.html ></a>
                 <div class="border border-dashed border-gray48 flex flex-wrap gap-12 mt-5">
                     <img class="h-8 xl:h-12" src="assets/images/vim.png" alt="Vim">
                     <img class="h-8 xl:h-12" src="assets/images/vscode.png" alt="Visual Studio Code">
@@ -152,7 +154,7 @@
                 <span>port-1, Phostel, Delira, Form.</span>
             </div>
             <div>
-                <a class="underline" href="project.html">/project.html ></a>
+                <a class="active:decoration-wavy hover:decoration-wavy underline" href="project.html">/project.html ></a>
                 <div class="border border-dashed border-gray48 flex flex-wrap gap-12 mt-5">
                     <img class="h-8 xl:h-12" src="assets/images/icon.png" alt="port-1">
                     <img class="h-8 xl:h-12" src="assets/images/project_phostel_icon.png" alt="Phostel">
@@ -212,13 +214,13 @@
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">Maps</h2>
-                    <iframe height="250" class="w-full" src="https://www.openstreetmap.org/export/embed.html?bbox=109.13990020751955%2C-7.495238810727947%2C109.36031341552736%2C-7.375405379038378&amp;layer=mapnik&amp;marker=-7.435326183423262%2C109.25010681152344"></iframe>
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
         <hr class="my-6 border-neutral-950 sm:mx-auto lg:my-8">
         <div class="grid border-t border-dashed border-gray48">
-            <div class="box bg-hacker"><span class="text-sm text-black sm:text-center">(C) 2025 <a href="#" class="hover:underline">Ega(TM)</a>. All Rights Reserved. </span></div>
+            <div class="box bg-hacker"><span class="text-sm text-black sm:text-center">(C) 2025 <a href="#" class="hover:underline">Ega(TM)</a>. Unlicense License.</span></div>
             <div class="box bg-black">&nbsp;</div>
             <div class="box bg-gray24">&nbsp;</div>
             <div class="box bg-gray48">&nbsp;</div>

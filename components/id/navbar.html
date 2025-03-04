@@ -1,7 +1,7 @@
 <nav class="bg-black mt-5 z-2 mb-8 border-y border-dashed border-gray48">
     <div class="flex flex-wrap items-center justify-between mx-auto">
         <a href="./" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="assets/images/logo.png" alt="Logo" class="h-7 md:h-5">
+            <img src="../assets/images/logo.png" alt="Logo" class="h-7 md:h-5">
         </a>
 
         <!-- hamburger menu-->
@@ -9,24 +9,28 @@
             class="inline-flex items-center justify-center text-sm md:hidden cursor-pointer" aria-controls="navbar-default"
             aria-expanded="false">
             <span class="sr-only">Open main menu</span>
-            <img class="h-7 md:h-5" src="assets/images/menu.png" alt="Menu icon">
+            <img class="h-7 md:h-5" src="../assets/images/menu.png" alt="Menu icon">
         </button>
 
         <!-- navbar menu -->
-        <div class="mt-5 md:mt-0 hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul
-                class="gap-3 font-medium flex flex-col md:p-0 mt-0 md:gap-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+        <div class="mt-5 flex md:mt-0 hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="gap-3 font-medium flex flex-col md:p-0 mt-0 md:gap-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 <li>
-                    <a class="bg-hacker hover:underline primary text-neutral-950" href="assets/images/CV.pdf">Download CV</a>
+                    <a class="bg-hacker hover:underline primary text-neutral-950" href="../assets/misc/CV.pdf">Download CV</a>
                 </li>
                 <li>
-                    <a href="about.html" class="block md:border-0 md:p-0 hover:underline">About</a>
+                    <a href="./tentang.html" class="block md:border-0 md:p-0 hover:underline navigation {{ currentPage === 'about.html' ? 'active' : '' }}">/tentang</a>
                 </li>
                 <li>
-                    <span class="md:border-0 md:p-0 underline" title="English (Selected)">>EN</span>
-                    <span class="md:border-0 md:p-0">/</span>
-                    <a href="id/{{ currentPage }}" class="md:border-0 md:p-0 hover:underline"
-                        title="Bahasa Indonesia">ID</a>
+                    <a href="./proyek.html" class="block md:border-0 md:p-0 hover:underline navigation {{ currentPage === 'project.html' ? 'active' : '' }}">/proyek</a>
+                </li>
+                <li>
+                    <a href="./keterampilan.html" class="block md:border-0 md:p-0 hover:underline navigation {{ currentPage === 'skill.html' ? 'active' : '' }}">/keterampilan</a>
+                </li>
+                <li>
+                    <a href="../{{ currentPage }}" class="hover:underline" title="English">EN</a>
+                    <span>/</span>
+                    <span class="underline" title="Bahasa Indonesia (Terpilih)">>ID</span>
                 </li>
             </ul>
         </div>
