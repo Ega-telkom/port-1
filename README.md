@@ -14,7 +14,7 @@ Untuk memulai server:
 npm run dev
 ```
 
-Untuk membangun `tailwindcss` secara otomatis:
+Untuk membangun `assets/styles/output.css` secara otomatis:
 ```sh
 npm run build:css
 ```
