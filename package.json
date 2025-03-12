@@ -1,8 +1,12 @@
 {
-  "name": "port-4",
-  "version": "proto-1.0.0",
+  "name": "port-1",
+  "version": "1.0",
   "description": "Portfolio milik Ega",
-  "main": "index.js",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ega-telkom/port-1"
+  },
   "scripts": {
     "dev": "live-server",
     "build:css": "npx @tailwindcss/cli -i assets/styles/input.css -o assets/styles/output.css --watch --minify",
