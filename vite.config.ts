@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
-  base: '/port-1/',
+  base: '/',
   plugins: [
     tailwindcss(),
     vue(),
