@@ -1,43 +1,87 @@
 <script setup lang="ts">
 // import { ref, onMounted } from 'vue'
 import Greeting from '@components/Greetings.vue'
-import { ref, onMounted } from 'vue';
-import { CalendarHeatmap } from 'vue3-calendar-heatmap';
-import githubData from '@/data/Ega-telkom.json';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import * as AsciinemaPlayer from "asciinema-player";
+import 'asciinema-player/dist/bundle/asciinema-player.css';
+import '@/hacker.css';
 
-const heatmapData = githubData.contributions;
-const containerRef = ref<HTMLElement>();
+const loading = ref(false)
+
+const playerContainer = ref<HTMLDivElement | null>(null)
+const frame = ref('|')
+
+const frames = ['|', '/', '-', '\\']
+let i = 0
+let timer: ReturnType<typeof setInterval>
+let showTimer: ReturnType<typeof setTimeout>
+
+function startSpinner() {
+  timer = setInterval(() => {
+    frame.value = frames[i]
+    i = (i + 1) % frames.length
+  }, 100)
+}
+
+function finishLoading() {
+  clearTimeout(showTimer)
+  loading.value = false
+}
 
 onMounted(() => {
-  if (containerRef.value) {
-    containerRef.value.scrollLeft = containerRef.value.scrollWidth;
-  }
+  
+  startSpinner()
+  
+  showTimer = setTimeout(() => {
+    loading.value = true
+  }, 1000)
+
+  if (!playerContainer.value) return
+  
+  const player = AsciinemaPlayer.create(
+    '/casts/lavat.cast',
+    playerContainer.value,
+    {
+      terminalFontFamily: "'IBM Plex Mono', monospace",
+      loop: true,
+      autoPlay: true,
+      controls: false,
+      fit: false,
+      theme: 'hacker',
+    }
+  )
+  
+  player.addEventListener('playing', () => {
+    clearInterval(timer)
+    finishLoading()
+  })
 });
+
+onBeforeUnmount(() => {
+  clearInterval(timer)
+})
 </script>
 
 <template>
     <div class="border-b border-gray48">
-        <div class="max-w-7xl mx-auto border-x border-gray48">
-            <img fetchpriority="high" class="w-full object-cover h-32 xl:h-48" src="/images/banner.webp"
+        <div class="max-w-6xl mx-auto border-x border-gray48">
+            <img fetchpriority="high" class="w-full object-cover h-32 lg:h-48" src="/images/banner.webp"
                 alt="Banner">
         </div>
     </div>
 
     <!-- content -->
-    <div class="text-white main max-w-7xl mx-auto border-x border-gray48 px-2 xl:px-0">
-
-        <span class="bg-black block text-neutral-600 text-sm">#h1-greet mb-10 xl:mb-20 flex</span>
+    <div class="text-white main max-w-6xl mx-auto border-x border-gray48">
         <Greeting />
         
-        <div ref="containerRef" class="h-80 overflow-x-auto overflow-y-hidden">
-          <CalendarHeatmap 
-            :values="heatmapData" 
-            :end-date="new Date()"
-          />
+        <div class="bg-black h-64 overflow-hidden">
+            <p class="pt-2" v-if="loading">&nbsp;{{ frame }} <span class="text-hacker">[INFO]</span> Downloading cast...</p>
+            <p v-if="loading">&nbsp;{{ frame }} <span class="text-hacker">[INFO]</span> Loading playerContainer...</p>
+            <p v-if="loading">&nbsp;{{ frame }} <span class="text-hacker">[INFO]</span> Finishing...</p>
+            <div v-show="!loading" ref="playerContainer" class="player-container"></div>
         </div>
-
-        <span class="block text-neutral-600 text-sm">#h2-who mb-12</span>
-        <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="about" class="hover:underline focus:underline" href="#about"># Who Am I?</a></h2>
+        
+        <h2 class="overflow-hidden text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="about" class="hover:underline focus:underline" href="#about"><span class="border-r border-gray48">&nbsp;1&nbsp;</span> Who Am I?</a></h2>
         <div class="bg-black pb-12 xl:pb-24 p-2 xl:p-5">
             <div class="flex mb-5">
                 <a class="active:decoration-wavy hover:decoration-wavy underline" href="about.html">/about.html ></a>
@@ -46,28 +90,27 @@ onMounted(() => {
                 <a href="https://github.com/Ega-telkom" target="_blank" rel="noopener noreferrer" class="border border-dashed border-gray48 hover:border-solid focus:border-solid cursor-pointer">
                     <img class="xl:h-8 h-6 mb-5" src="/images/github.webp" alt="Github">
                     <p>Ega-telkom</p>
-                    <span class="underline">Github<span class="material-icons-outlined">open_in_new</span></span>
+                    <span class="underline text-neutral-500">Github<span class="material-icons-outlined">open_in_new</span></span>
                 </a>
                 <a href="https://github.com/greneboy" target="_blank" rel="noopener noreferrer" class="border border-dashed border-gray48 hover:border-solid focus:border-solid cursor-pointer">
                     <img class="xl:h-8 h-6 mb-5" src="/images/github.webp" alt="Github">
                     <p>greneboy</p>
-                    <span class="underline">Github<span class="material-icons-outlined">open_in_new</span></span>
+                    <span class="underline text-neutral-500">Github<span class="material-icons-outlined">open_in_new</span></span>
                 </a>
                 <a href="https://www.linkedin.com/in/ega-natha-29469434b/" target="_blank" rel="noopener noreferrer" class="border border-dashed border-gray48 hover:border-solid focus:border-solid cursor-pointer">
                     <img class="xl:h-8 h-6 mb-5" src="/images/linkedin.webp" alt="LinkedIn">
                     <p>Ega natha</p>
-                    <span class="underline">LinkedIn<span class="material-icons-outlined">open_in_new</span></span>
+                    <span class="underline text-neutral-500">LinkedIn<span class="material-icons-outlined">open_in_new</span></span>
                 </a>
                 <a href="https://www.youtube.com/@Ega-y8k" target="_blank" rel="noopener noreferrer" class="border border-dashed border-gray48 hover:border-solid focus:border-solid cursor-pointer">
                     <img class="xl:h-8 h-6 mb-5" src="/images/youtube.webp" alt="YouTube">
                     <p>@Ega-y8k</p>
-                    <span class="underline">YouTube<span class="material-icons-outlined">open_in_new</span></span>
+                    <span class="underline text-neutral-500">YouTube<span class="material-icons-outlined">open_in_new</span></span>
                 </a>
             </div>
         </div>
 
-        <span class="bg-black block text-neutral-600 text-sm">#h2-skills mb-12</span>
-        <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="skills" class="hover:underline focus:underline" href="#skills"># Skills &#8595;</a></h2>
+        <h2 class="overflow-hidden text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="skills" class="hover:underline focus:underline" href="#skills"><span class="border-r border-gray48">&nbsp;2&nbsp;</span> Skills</a></h2>
         <div class="bg-black pb-12 xl:pb-24 p-2 xl:p-5">
             <div class="flex pb-5">
                 <span>In summary I like to program by programming, design by designing, do by doing.</span>
@@ -93,8 +136,7 @@ onMounted(() => {
             </div>
         </div>
 
-        <span class="bg-black block text-neutral-600 text-sm">#h2-projects</span>
-        <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="projects" class="hover:underline focus:underline" href="#projects"># Projects &#8595;</a></h2>
+        <h2 class="overflow-hidden text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="projects" class="hover:underline focus:underline" href="#projects"><span class="border-r border-gray48">&nbsp;3&nbsp;</span> Projects</a></h2>
         <div class="bg-black pb-12 xl:pb-24 p-2 xl:p-5">
             <div class="flex pb-5">
                 <span>port-1, Phostel, Delira, Form.</span>
@@ -109,8 +151,7 @@ onMounted(() => {
             </div>
         </div>
 
-        <span class="bg-black block text-neutral-600 text-sm">#h2-contact mb-12</span>
-        <h2 class="text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="contact" class="hover:underline focus:underline" href="#contact"># Contact &#8595;&#8595;</a></h2>
+        <h2 class="overflow-hidden text-3xl xl:text-5xl border-y border-dashed border-gray48"><a name="contact" class="hover:underline focus:underline" href="#contact"><span class="border-r border-gray48">&nbsp;4&nbsp;</span> Contact &#8595;&#8595;</a></h2>
 
         <div class="bg-black pt-2 xl:pt-5">
             <form id="form" class="grid grid-cols-1 gap-5">

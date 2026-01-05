@@ -1,0 +1,25 @@
+.asciinema-player-theme-hacker {
+  /* Foreground (default text) color */
+  --term-color-foreground: #ffffff;
+
+  /* Background color */
+  --term-color-background: #000000;
+
+  /* Palette of 16 standard ANSI colors */
+  --term-color-0: #000000;
+  --term-color-1: #ff0000;
+  --term-color-2: #00ff00;
+  --term-color-3: #ffff00;
+  --term-color-4: #ff00ff;
+  --term-color-5: #ff00ff;
+  --term-color-6: #00ffff;
+  --term-color-7: #ffffff;
+  --term-color-8: #0000ff;
+  --term-color-9: #ff0000;
+  --term-color-10: #00ff00;
+  --term-color-11: #ffff00;
+  --term-color-12: #ff00ff;
+  --term-color-13: #ff00ff;
+  --term-color-14: #00ffff;
+  --term-color-15: #ffffff;
+}

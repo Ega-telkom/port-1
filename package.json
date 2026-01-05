@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.21",
-    "asciinema-player": "^3.6.3",
     "leaflet": "^1.9.4",
     "tippy.js": "^6.3.7",
     "typescript": "~5.9.3",
@@ -18,10 +17,13 @@
     "vue3-calendar-heatmap": "^2.0.5"
   },
   "dependencies": {
+    "@ibm/plex-mono": "^1.1.0",
     "@tailwindcss/vite": "^4.1.16",
     "@vitejs/plugin-vue": "^6.0.1",
+    "asciinema-player": "3.13.5",
     "cal-heatmap": "^4.2.4",
     "dayjs": "^1.11.19",
+    "material-icons": "^1.13.14",
     "tailwindcss": "^4.1.16",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"

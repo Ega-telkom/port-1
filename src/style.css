@@ -2,7 +2,7 @@
 
 @theme {  
     --color-gray24: #242424;
-    --color-gray48: #242424;
+    --color-gray48: #484848;
     --color-hacker: #00d126;
 }
 
@@ -61,7 +61,7 @@
 
 
 :root {
-    font-family: IBM Plex Mono, monospace;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 /* Warna strip yang keren */
@@ -69,8 +69,7 @@
 html::before {
 	transform: translateZ(0);
 
-	background-image:linear-gradient(90deg,#0e0e0e 1px,#0000 1px),linear-gradient(#0e0e0e 1px,#0000 1px);
-	background-size:12px 12px;
+	background-image: linear-gradient(45deg, #242424 6.25%, #000000 6.25%, #000000 50%, #242424 50%, #242424 56.25%, #000000 56.25%, #000000 100%);	background-size:12px 12px;
 
 	/* Agar semua website mendukung */
 	content: "";

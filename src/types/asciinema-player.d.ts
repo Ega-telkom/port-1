@@ -25,8 +25,12 @@ declare module 'asciinema-player' {
     getCurrentTime(): number
     getDuration(): number
     dispose(): void
+    addEventListener(
+      type: 'ready' | 'play' | 'playing' | 'pause' | 'ended' | 'input',
+      listener: EventListenerOrEventListenerObject
+    ): void
   }
-
+  
   export function create(
     src: string,
     element: HTMLElement,

@@ -45,42 +45,38 @@ onUnmounted(() => {
     <!-- footer -->
     <footer class="text-white border-t border-gray48">
         <!-- <span class="bg-black block text-neutral-600 text-sm">#footer text-white p-4</span> -->
-        <div class="mx-auto w-full max-w-7xl border-x border-gray48">
+        <div class="mx-auto w-full max-w-6xl border-x border-gray48">
             <div class="mb-12"><img class="h-20 xl:h-30" src="/images/large.webp" alt=""></div>
-            <div class="md:flex md:justify-between">
-                <div class="grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2">
+            <div class="md:flex md:justify-between pb-15 lg:pb-20">
+                <div class="grid grid-cols-1 gap-10 lg:gap-5 sm:grid-cols-2">
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">Socials</h2>
-                        <ul class="font-medium flex xl:grid gap-5">
+                        <h2 class="mb-2 text-sm text-neutral-400 uppercase">Socials</h2>
+                        <ul class="flex xl:grid gap-2">
                             <li class="">
-                                <a href="https://github.com/Ega-telkom/" target="_blank" rel="noopener noreferrer" class="hover:underline">Github<span class="material-icons-outlined">open_in_new</span></a>
+                                <a href="https://github.com/Ega-telkom/" target="_blank" rel="noopener noreferrer" class="underline">Github</a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/ega-natha-29469434b/" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn<span class="material-icons-outlined">open_in_new</span></a>
+                                <a href="https://www.linkedin.com/in/ega-natha-29469434b/" target="_blank" rel="noopener noreferrer" class="underline">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">See Also</h2>
-                        <ul class="font-medium flex xl:grid gap-5">
+                        <h2 class="mb-2 text-sm text-neutral-400 uppercase">See Also</h2>
+                        <ul class="flex xl:grid gap-2">
                             <li>
-                                <a href="about.html" class="hover:underline">About</a>
+                                <a href="about.html" class="underline">About</a>
                             </li>
                             <li>
-                                <a href="skill.html" class="hover:underline">Skills</a>
+                                <a href="skill.html" class="underline">Skills</a>
                             </li>
                             <li>
-                                <a href="https://github.com/Ega-telkom/port-1" target="_blank" rel="noopener noreferrer" class="hover:underline">Source Code<span class="material-icons-outlined">open_in_new</span></a>
+                                <a href="https://github.com/Ega-telkom/port-1" target="_blank" rel="noopener noreferrer" class="underline">Source Code</a>
                             </li>
                         </ul>
                     </div>
                     <div class="w-auto">
-                        <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">Address</h2>
-                        <p>SMK Telkom Purwokerto, Jalan Mayor Jenderal DI. Panjaitan, Teluk, Purwokerto, Banyumas, Central Java, Java, 53141</p>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase border-y border-dashed border-gray48">Maps</h2>
-                        <div ref="mapContainer" style="height: 400px; width: 100%;"></div>
+                        <h2 class="mb-2 text-sm text-neutral-400 uppercase">Address</h2>
+                        <p class="pr-10">SMK Telkom Purwokerto, Jalan Mayor Jenderal DI. Panjaitan, Teluk, Purwokerto, Banyumas, Central Java, Java, 53141</p>
                     </div>
                 </div>
             </div>
@@ -88,15 +84,17 @@ onUnmounted(() => {
     </footer>
     <hr class="border-neutral-950 sm:mx-auto">
     <div class="grid border-y border-gray48">
-        <div class="mx-auto w-full max-w-7xl border-x border-gray48">
-            <div class="box bg-hacker"><span class="text-sm text-black sm:text-center">(C) 2025 Ega, <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer" class="hover:underline">MIT License</a>. Indie·Indeed(TM)</span></div>
-            <div class="box bg-black">&nbsp;</div>
-            <div class="box bg-gray24">&nbsp;</div>
-            <div class="box bg-gray48">&nbsp;</div>
-            <div class="box bg-white">&nbsp;</div>
+        <div class="mx-auto w-full max-w-6xl border-x border-gray48">
+            <div class="flex justify-between">
+                <span class="text-sm text-white sm:text-center">(C) 2025 Ega, <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer" class="hover:underline">MIT License</a>. Indie·Indeed(TM)</span>
+                <div>
+                    <span class="bg-hacker">&nbsp;PROD&nbsp;</span>
+                    <span class="bg-gray48 text-white">&nbsp;v1.5&nbsp;</span> 
+                </div>
+            </div>
         </div>
     </div>
-        <div class="mx-auto w-full max-w-7xl border-x border-gray48">
+        <div class="mx-auto w-full max-w-6xl border-x border-gray48">
             <div class="box bg-transparent">&nbsp;</div>
             <div class="box bg-transparent">&nbsp;</div>
             <div class="box bg-transparent">&nbsp;</div>

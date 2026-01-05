@@ -1,13 +1,13 @@
 <template>
 
     <div class="border-b border-gray48">
-        <div class="max-w-7xl mx-auto border-x border-gray48">
-            <img fetchpriority="high" class="w-full object-cover h-32 xl:h-48" src="/images/banner-about.webp"
+        <div class="max-w-6xl mx-auto border-x border-gray48">
+            <img fetchpriority="high" class="w-full object-cover h-32 lg:h-48" src="/images/banner-about.webp"
                 alt="Banner">
         </div>
     </div>
 
-    <body class="max-w-7xl mx-auto text-neutral-100 border-x border-gray48">
+    <body class="max-w-6xl mx-auto text-neutral-100 border-x border-gray48">
 
         <!-- content -->
         <main class="pt-2 bg-black">
