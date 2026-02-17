@@ -2,6 +2,9 @@
 import { RouterLink, useRoute } from 'vue-router';
 import { useNavbar } from '@/composables/useNavbar'
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const route = useRoute()
 const { isOpen, toggle } = useNavbar()
@@ -16,14 +19,14 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
-    label: 'Download CV', 
+    label: t('navbar.download_cv'),
     href: '/misc/CV.pdf',
     class: 'bg-hacker hover:underline primary text-neutral-950',
     isExternal: true
   },
-  { label: '/about', to: '/about' },
-  { label: '/project', to: '/project' },
-  { label: '/skill', to: '/skill' },
+  { label: t('link.about'), to: '/about' },
+  { label: t('link.project'), to: '/project' },
+  { label: t('link.skill'), to: '/skill' },
 ]
 
 const isActive = (to?: string) => {
@@ -32,10 +35,10 @@ const isActive = (to?: string) => {
 
 const getLinkClass = (item: MenuItem) => {
   if (item.class) return item.class
-  
+
   const baseClass = 'text-white hover:underline'
   const activeClass = isActive(item.to) ? 'underline' : ''
-  
+
   return `${baseClass} ${activeClass}`
 }
 </script>

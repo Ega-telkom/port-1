@@ -19,16 +19,16 @@ L.Marker.prototype.options.icon = DefaultIcon
 
 onMounted(() => {
   if (!mapContainer.value) return
-  
+
   // Inisialisasi map
   map = L.map(mapContainer.value).setView([-7.435167, 109.250249], 9)
-  
+
   // Tambahkan tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors',
     maxZoom: 19
   }).addTo(map)
-  
+
   // Tambahkan marker
   L.marker([-7.435167, 109.250249])
     .addTo(map)
@@ -88,8 +88,9 @@ onUnmounted(() => {
             <div class="flex justify-between">
                 <span class="text-sm text-white sm:text-center">(C) 2025 Ega, <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer" class="hover:underline">MIT License</a>. Indie·Indeed(TM)</span>
                 <div>
-                    <span class="bg-hacker">&nbsp;PROD&nbsp;</span>
-                    <span class="bg-gray48 text-white">&nbsp;v1.5&nbsp;</span> 
+                    <span class="bg-red-500">&nbsp;DEV&nbsp;</span>
+                    <!--<span class="bg-hacker">&nbsp;PROD&nbsp;</span>-->
+                    <span class="bg-gray48 text-white">&nbsp;v1.5&nbsp;</span>
                 </div>
             </div>
         </div>
@@ -100,5 +101,5 @@ onUnmounted(() => {
             <div class="box bg-transparent">&nbsp;</div>
             <div class="box bg-transparent">&nbsp;</div>
         </div>
-    
+
 </template>

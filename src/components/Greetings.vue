@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // Data arrays
 const words = [
-  'un·\u200Bcon·\u200Bven\u200Btion·\u200Bal',
-  'Indie·\u200BIndeed',
-  'Worse is better',
+  t('home.greeting.1'),
+  t('home.greeting.2'),
+  t('home.greeting.3')
 ]
 
 const frame = ref('|')

@@ -1,0 +1,17 @@
+{
+    "navbar": {
+        "home": "Go Home",
+        "download_cv": "Download CV",
+        "about": "/about",
+        "project": "/project",
+        "skill": "/skill"
+    },
+    "home" : {
+        "title": "Home",
+        "greeting": {
+            "1": "Worse is better",
+            "2": "Indie·\u200BIndeed",
+            "3": "un·\u200Bcon·\u200Bven\u200Btion·\u200Bal"
+        }
+    }
+}
