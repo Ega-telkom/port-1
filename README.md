@@ -1,6 +1,6 @@
 # port-1
 ![Static Badge](https://img.shields.io/badge/Indie%20Indeed-green)
-![Static Badge](https://img.shields.io/badge/Version-1.5-green)
+![Static Badge](https://img.shields.io/badge/Version-2.0-green)
 ![Static Badge](https://img.shields.io/badge/Progress-20%25-green)
 ![Badgen](https://badgen.net/github/commits/Ega-telkom/port-1)
 ![Badgen](https://badgen.net/github/license/Ega-telkom/port-1)

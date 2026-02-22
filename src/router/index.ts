@@ -1,50 +1,35 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import type { RouteRecordRaw } from 'vue-router'
-import i18n from '@/i18n'
-
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Project from '../views/Project.vue'
-import Skill from '../views/Skill.vue'
-import 'vue3-calendar-heatmap/dist/style.css'
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import Home from "../views/Home.vue";
+import Project from "../views/Project.vue";
+import NotFound from "../views/NotFound.vue";
+import { i18n } from "../i18n";
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    name: 'home',
+    path: "/:locale(en|id)?",
+    name: "home",
     component: Home,
-    meta: { titleKey: 'home.title'}
   },
   {
-    path: '/about',
-    name: 'about',
-    component: About ,
-    meta: { title: 'About' }
-  },
-  {
-    path: '/project',
-    name: 'project',
+    path: "/:locale(en|id)?/project",
+    name: "project",
     component: Project,
-    meta: { title: 'Project' }
   },
   {
-    path: '/skill',
-    name: 'skill',
-    component: Skill,
-    meta: { title: 'Skill' }
-  }
-]
+    path: "/:locale(en|id)?/:pathMatch(.*)*",
+    name: "not-found",
+    component: NotFound,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+});
+
+router.beforeEach((to) => {
+  const locale = (to.params.locale as "en" | "id") || "en"
+  i18n.global.locale.value = locale
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.meta.titleKey) {
-    document.title = i18n.global.t(to.meta.titleKey as string)
-  }
-  next()
-})
-
-export default router
+export default router;
