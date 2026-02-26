@@ -1,67 +1,50 @@
 @import "tailwindcss";
 
-@theme {  
+@theme {
     --color-gray24: #242424;
     --color-gray48: #484848;
     --color-hacker: #00d126;
 }
 
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'IBM Plex Mono';
-	font-style: normal;
-	font-weight: 100;
-	src: url('/woff/ibm-plex-mono-v19-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  /* ibm-plex-mono-100italic - latin */
-  @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'IBM Plex Mono';
-	font-style: italic;
-	font-weight: 100;
-	src: url('/woff/ibm-plex-mono-v19-latin-100italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  /* ibm-plex-mono-regular - latin */
-  @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'IBM Plex Mono';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/woff/ibm-plex-mono-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  /* ibm-plex-mono-italic - latin */
-  @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'IBM Plex Mono';
-	font-style: italic;
-	font-weight: 400;
-	src: url('/woff/ibm-plex-mono-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  /* ibm-plex-mono-700 - latin */
-  @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'IBM Plex Mono';
-	font-style: normal;
-	font-weight: 700;
-	src: url('/woff/ibm-plex-mono-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  /* ibm-plex-mono-700italic - latin */
-  @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'IBM Plex Mono';
-	font-style: italic;
-	font-weight: 700;
-	src: url('/woff/ibm-plex-mono-v19-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ioskeley Mono Regular';
+    font-style: normal;
+    font-weight: 100;
+    src: url('./woff/IoskeleyMono-Regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ibm-plex-mono-100italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ioskeley Mono Regular Italic';
+    font-style: italic;
+    font-weight: 100;
+    src: url('./woff/IoskeleyMono-Italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ibm-plex-mono-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'IBM Plex Mono';
+    font-family: 'Ioskeley Mono Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./woff/IoskeleyMono-Bold.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ibm-plex-mono-700italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ioskeley Mono Bold Italic';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./woff/IoskeleyMono-BoldItalic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 
-:root {
-    font-family: "IBM Plex Mono", monospace;
+:root, pre{
+    font-family: "Ioskeley Mono Regular", monospace;
 }
 
 /* Warna strip yang keren */
@@ -69,7 +52,7 @@
 html::before {
 	transform: translateZ(0);
 
-	background-image: linear-gradient(45deg, #242424 6.25%, #000000 6.25%, #000000 50%, #242424 50%, #242424 56.25%, #000000 56.25%, #000000 100%);	background-size:12px 12px;
+	/* background-image: linear-gradient(45deg, #242424 6.25%, #000000 6.25%, #000000 50%, #242424 50%, #242424 56.25%, #000000 56.25%, #000000 100%);	background-size:12px 12px; */
 
 	/* Agar semua website mendukung */
 	content: "";
@@ -82,7 +65,7 @@ html::before {
 }
 
 html {
-	background-color: #000000;
+	background-color: #d9d9d9;
 }
 
 .navigation.active {
@@ -93,7 +76,7 @@ html {
 	width: 10px;
 	background-color: black; /* overall scrollbar background */
 }
-  
+
 *::-webkit-scrollbar-track {
 	background: black; /* makes the track invisible */
 }

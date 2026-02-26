@@ -1,99 +1,127 @@
 <script setup lang="ts">
-import { RouterLink, useRoute } from 'vue-router';
-import { useNavbar } from '@/composables/useNavbar'
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { computed } from "vue";
+import { RouterLink, useRoute } from "vue-router";
+import type { RouteLocationRaw } from "vue-router";
+import { useNavbar } from "@/composables/useNavbar";
+import { useI18n } from "vue-i18n";
+import LocaleSwitch from "@/components/LocaleSwitch.vue";
 
-const { t } = useI18n()
-
-const route = useRoute()
-const { isOpen, toggle } = useNavbar()
+const { t } = useI18n();
+const route = useRoute();
+const { isOpen, toggle } = useNavbar();
 
 interface MenuItem {
-  label: string
-  href?: string
-  to?: string
-  class?: string
-  isExternal?: boolean
+    label: string;
+    to?: RouteLocationRaw;
+    href?: string;
+    isExternal?: boolean;
 }
 
-const menuItems: MenuItem[] = [
-  {
-    label: t('navbar.download_cv'),
-    href: '/misc/CV.pdf',
-    class: 'bg-hacker hover:underline primary text-neutral-950',
-    isExternal: true
-  },
-  { label: t('link.about'), to: '/about' },
-  { label: t('link.project'), to: '/project' },
-  { label: t('link.skill'), to: '/skill' },
-]
+const currentLocale = computed<"en" | "id">(() => {
+    return (route.params.locale as "en" | "id") || "en";
+});
 
-const isActive = (to?: string) => {
-  return to && route.path === to
-}
-
-const getLinkClass = (item: MenuItem) => {
-  if (item.class) return item.class
-
-  const baseClass = 'text-white hover:underline'
-  const activeClass = isActive(item.to) ? 'underline' : ''
-
-  return `${baseClass} ${activeClass}`
-}
+const menuItems = computed<MenuItem[]>(() => [
+    {
+        label: t("link.cv"),
+        href: "/misc/test.pdf",
+        isExternal: true,
+    },
+    {
+        label: t("link.project"),
+        to: {
+            name: "project",
+            params: currentLocale.value === "id" ? { locale: "id" } : {},
+        },
+    },
+]);
 </script>
 
 <template>
-    <nav class="border-b border-gray48">
-        <div class="max-w-6xl mx-auto border-x px-5 border-gray48">
-            <div class="h-16 flex items-center justify-between">
-                <RouterLink to="/" class="flex items-center space-x-3">
-                    <img src="/images/logo.webp" alt="Logo" class="h-7 md:h-5">
-                </RouterLink>
+    <nav class="mb-5">
+        <div class="flex items-stretch justify-between">
+            <!-- Logo / Home -->
+            <RouterLink
+                :to="{
+                    name: 'home',
+                    params: currentLocale === 'en' ? {} : { locale: 'id' },
+                }"
+                class="font-bold hover:underline pb-2"
+            >
+                <span v-if="route.name === 'home'"> PORTFOLIO-1 v.2.0.0 </span>
+                <span v-else> ← {{ t("navbar.home") }}</span>
+            </RouterLink>
 
-                <button type="button" @click="toggle" class="md:hidden cursor-pointer">
-                    <span class="sr-only">Open main menu</span>
-                    <img class="h-7" src="/images/menu.webp" alt="Menu icon">
-                </button>
+            <!-- Mobile Toggle -->
+            <button
+                type="button"
+                @click="toggle"
+                :class="isOpen ? 'border-x border-t -mb-px' : 'border -mb-px'"
+                class="bg-white px-2 lg:hidden cursor-pointer"
+            >
+                MENU
+            </button>
 
-                <!-- Desktop menu -->
-                <div class="hidden md:block">
-                    <ul class="flex flex-row space-x-8">
-                        <li v-for="item in menuItems" :key="item.label">
-                            <RouterLink v-if="item.to" :to="item.to" :class="getLinkClass(item)">
-                                {{ item.label }}
-                            </RouterLink>
-                            <a v-else :href="item.href" :class="getLinkClass(item)">
-                                {{ item.label }}
-                            </a>
-                        </li>
-                        <li class="text-white">
-                            <span class="underline">>EN</span>
-                            <span>/</span>
-                            <a href="id/" class="hover:underline">ID</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Mobile menu -->
-            <div v-show="isOpen" class="md:hidden pb-4">
-                <ul class="flex flex-col gap-3">
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex flex-row space-x-6 items-center">
                     <li v-for="item in menuItems" :key="item.label">
-                        <RouterLink v-if="item.to" :to="item.to" :class="getLinkClass(item)">
+                        <RouterLink
+                            v-if="item.to"
+                            :to="item.to"
+                            class="text-black hover:underline"
+                            active-class="underline"
+                        >
                             {{ item.label }}
                         </RouterLink>
-                        <a v-else :href="item.href" :class="getLinkClass(item)">
+
+                        <a
+                            v-else-if="item.href"
+                            :href="item.href"
+                            class="text-black hover:underline"
+                            target="_blank"
+                            rel="noopener"
+                        >
                             {{ item.label }}
                         </a>
                     </li>
-                    <li class="text-white">
-                        <span class="underline">>EN</span>
-                        <span>/</span>
-                        <a href="id/" class="hover:underline">ID</a>
+                    <p>-</p>
+                    <li>
+                        <LocaleSwitch />
                     </li>
                 </ul>
             </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div v-show="isOpen" class="lg:hidden p-2 border">
+            <ul class="flex flex-col gap-3">
+                <li v-for="item in menuItems" :key="item.label">
+                    <RouterLink
+                        v-if="item.to"
+                        :to="item.to"
+                        class="text-black hover:underline"
+                        active-class="underline"
+                        @click="toggle"
+                    >
+                        {{ item.label }}
+                    </RouterLink>
+
+                    <a
+                        v-else-if="item.href"
+                        :href="item.href"
+                        class="text-black hover:underline"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        {{ item.label }}
+                    </a>
+                </li>
+
+                <li>
+                    <LocaleSwitch />
+                </li>
+            </ul>
         </div>
     </nav>
 </template>

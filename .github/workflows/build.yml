@@ -1,4 +1,4 @@
-name: Build dan Deploy ke Github Pages
+name: Build & Deploy Vite/Vue.js
 
 on:
   push:
@@ -8,24 +8,19 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
-          
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
       - name: Install dependencies
-        run: npm install
-        
+        run: bun install
+
       - name: Build
-        run: npm run build
-        
-      - name: Add CNAME
-        run: echo "port-1.greneboy.com" > dist/CNAME
-        
+      run: bun run build
+
       - name: Deploy to prod branch
         uses: peaceiris/actions-gh-pages@v3
         with:
