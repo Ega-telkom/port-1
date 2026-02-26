@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+const { t, tm, rt } = useI18n()
+const skillCategories = ['tool', 'programming', 'framework', 'language'] as const
 </script>
 <template>
     <div class="border p-2 w-fit">
@@ -110,36 +111,28 @@ const { t } = useI18n();
                 >{{ t("home.skill.title") }}</a
             >
         </h2>
-        <div class="pt-2 grid grid-cols-2 md:flex gap-8 md:gap-16">
-            <div>
-                <p class="font-bold">{{ t("home.skill.tool") }}</p>
+        <div class="pt-2 grid grid-cols-2 md:flex gap-8 md:gap-16 mb-6">
+            <div v-for="key in skillCategories" :key="key">
+                <p class="font-bold">{{ t(`home.skill.${key}.title`) }}</p>
                 <ul class="list-disc pl-5">
-                    <li>Linux</li>
-                    <li>Bash/Fish</li>
-                    <li>LaTeX</li>
-                    <li>Typst</li>
-                    <li>git</li>
-                    <li>vim</li>
-                    <li>LaTeX</li>
-                </ul>
-            </div>
-            <div>
-                <p class="font-bold">{{ t("home.skill.language") }}</p>
-                <ul class="list-disc pl-5">
-                    <li>Go</li>
-                    <li>Kotlin</li>
-                    <li>Javascript</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-            </div>
-            <div>
-                <p class="font-bold">{{ t("home.skill.framework") }}</p>
-                <ul class="list-disc pl-5">
-                    <li>Go Fiber</li>
-                    <li>Vite/Vuejs</li>
+                    <li v-for="(item, idx) in tm(`home.skill.${key}.items`)" :key="idx">
+                        {{ rt(item) }}
+                    </li>
                 </ul>
             </div>
         </div>
+
+        <h2 class="border-b font-bold">
+            <a
+                name="this-site"
+                class="hover:underline focus:underline"
+                href="#this-site"
+                >{{ t("home.contact.title") }}</a
+            >
+        </h2>
+        <ul>
+            <li>Email:</li>
+            <li>Phone/Whatsapp:</li>
+        </ul>
     </div>
 </template>
