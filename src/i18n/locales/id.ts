@@ -31,23 +31,56 @@ export default {
     summary: {
       title: "Ringkasan",
       content:
-        "Backend, Frontend, and Mobile developer. Ideally I focus on quality rather than quantity (even though it takes time…). I like Open Source, good/clean code, and good documentation. ",
+        "Pengembang Backend, Frontend, dan Mobile. Secara idealis saya fokus pada kualitas dibanding kuantitas (walaupun membutuhkan waktu...). Saya suka Open Source, kode, dan dokumentasi yang rapi dan bagus. ",
     },
     social: {
       title: "Sosial",
     },
     skill: {
       title: "Keterampilan",
-      tool: "Alat",
-      language: "Bahasa",
-      framework: "Framework",
-    },
-    project: {
-      title: "Projects",
+      tool: {
+        title: "Alat",
+        items: ["Linux", "Bash/Fish", "LaTeX", "Typst", "git", "vim"]
+      },
+      programming: {
+        title: "Pemrograman",
+        items: ["Go", "Kotlin", "Javascript", "HTML", "CSS"]
+      },
+      framework: {
+        title: "Framework",
+        items: ["Go Fiber", "Vite/Vue.js"]
+      },
+      language: {
+        title: "Bahasa",
+        items: ["Indonesia (Utama)", "English"]
+      }
     },
     contact: {
       title: "Contact",
     },
+  },
+  project: {
+    title: "Proyek-proyek",
+    "port-1": {
+      title: "port-1",
+      image: "/images/port-1.png",
+      content: "Sebuah laman web portfolio sederhana. Dibuat menggunakan Vite/Vue.js dan beberapa komponen seperti vue-i18n untuk internasionalisasi dan pelokalan (i18n). Dan juga menggunakan TailwindCSS untuk mempermudah deklarasi gaya. (Typescript, Vite, Vue.js)"
+    },
+    "jalurku": {
+      title: "jalurku",
+      image: "/images/port-1.png",
+      content: ""
+    },
+    "Phostel": {
+      title: "Phostel",
+      image: "/images/port-1.png",
+      content: ""
+    },
+    "ddcutil-bh1750": {
+      title: "ddcutil-bh1750",
+      image: "/images/port-1.png",
+      content: ""
+    }
   },
   404: {
     1: "Boo! Tidak ada apa-apa disini!",
