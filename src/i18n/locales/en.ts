@@ -44,7 +44,7 @@ export default {
       title: "Contact",
       email: {
         title: "Email:",
-        content: "ega8642@gmail.com"
+        content: "ega8642 [at] gmail [dot] com"
       },
       phone: {
         title: "Phone:",

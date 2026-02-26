@@ -57,6 +57,14 @@ export default {
     },
     contact: {
       title: "Contact",
+      email: {
+        title: "Email:",
+        content: "ega8642 [at] gmail [dot] com"
+      },
+      phone: {
+        title: "Phone:",
+        content: "(+62) 812-2825-1248"
+      },
     },
   },
   project: {
