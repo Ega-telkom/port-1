@@ -6,15 +6,15 @@
 ![Badgen](https://badgen.net/github/license/Ega-telkom/port-1)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Ega-telkom/port-1)
 
-Sebuah portfolio versi 1.5 milik Ega.
+Sebuah portfolio versi 2.0 milik Ega.
 
 ## Memulai & Membangun
 Untuk memulai website secara lokal:
 ```sh
-npm run dev
+bun run dev
 ```
 
 Untuk membangun website:
 ```sh
-npm run build
+bun run build
 ```
