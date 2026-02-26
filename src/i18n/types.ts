@@ -1,3 +1,3 @@
-import en from './locales/en.json'
+import en from './locales/en'
 
 export type MessageSchema = typeof en
