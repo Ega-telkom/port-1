@@ -6,13 +6,13 @@ import LocaleSwitch from "@components/LocaleSwitch.vue";
 
 onMounted(() => {
     [
-        "/images/port-1.webp",
-        "/images/fundivest.webp",
-        "/images/biblio.webp",
-        "/images/jalurku.webp",
-        "/images/smilebox.webp",
-        "/images/eatscape.webp",
-        "/images/phostel.webp",
+        "/images/thumb/port-1.webp",
+        "/images/thumb/fundivest.webp",
+        "/images/thumb/biblio.webp",
+        "/images/thumb/jalurku.webp",
+        "/images/thumb/smilebox.webp",
+        "/images/thumb/eatscape.webp",
+        "/images/thumb/phostel.webp",
     ].forEach((src) => {
         const img = new Image();
         img.src = src;

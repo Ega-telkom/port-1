@@ -24,14 +24,20 @@ const projectKeys = [
     "Phostel",
 ];
 
-function openImage(key: string) {
-  const img = new Image()
-  img.src = t(`project.${key}.image`)
-  img.onload = () => {
+function openImage(key: string, event: MouseEvent) {
+  const img = event.target as HTMLImageElement
+  const fullSrc = t(`project.${key}.image`) // public/images/xxx.jpg
+  const lowresSrc = fullSrc.replace('/images/', '/images/thumb/')
+
+  const imgEl = new Image()
+  imgEl.src = fullSrc
+  imgEl.onload = () => {
     lightbox.loadAndOpen(0, [{
-      src: img.src,
-      width: img.naturalWidth,
-      height: img.naturalHeight
+      src: fullSrc,
+      msrc: lowresSrc, // placeholder saat loading
+      width: imgEl.naturalWidth,
+      height: imgEl.naturalHeight,
+      thumbEl: img
     }])
   }
 }
@@ -59,8 +65,9 @@ function openImage(key: string) {
                 </h2>
             </div>
             <div class="border">
-                <div class="bg-neutral-200 cursor-zoom-in">
-                    <img :src="t(`project.${key}.image`)" @click="openImage(key)" class="cursor-zoom-in" />
+                <div class="bg-neutral-200 cursor-zoom-in pt-2 px-4 flex justify-center overflow-hidden">
+                    <img :src="t(`project.${key}.image`).replace('/images/', '/images/thumb/')" 
+                         @click="openImage(key, $event)" class="shadow-md object-cover object-top"/>
                 </div>
             </div>
             <p
@@ -149,5 +156,6 @@ function openImage(key: string) {
 <style>
 .pswp__img {
   background: transparent !important; /* atau warna sesuai background page */
+  transition: opacity 0.2s ease;
 }
 </style>
