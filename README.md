@@ -11,6 +11,9 @@ Sebuah portfolio versi 2.0 milik Ega.
 ## TODO
 - [ ] Simpan dimensi thumbnail
 - [ ] Ikon
+- [ ] Skor Lighthouse: ±100
+  - [ ] Aksesibilitas: "Dokumen tidak memiliki penanda utama"
+  - [ ] SEO: "Dokumen tidak memiliki deskripsi meta" 
 
 ## Memulai & Membangun
 Untuk memulai website secara lokal:
