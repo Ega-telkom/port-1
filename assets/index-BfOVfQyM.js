@@ -55,7 +55,7 @@
          (__)\\       )\\/\\
              ||----w |
              ||     ||
-         ^^^^^^^^^^^^^^^^`,-1))]),o[4]||(o[4]=V("div",{class:"flex border-t border-dashed"},[V("a",{href:"https://github.com/USERNAME",class:"flex gap-1 items-center text-sm px-3 py-1"},[V("span",{class:"text-sm! material-icons no-underline!"},"open_in_new"),V("span",{class:"underline hover:decoration-dashed"},"GitHub")])],-1))])])])],64))}}),wm={class:"border p-2 w-fit"},Om=ut({__name:"NotFound",setup(e){const{t}=rn();return(n,s)=>(te(),pe(he,null,[V("div",wm,[Et(ce(K(t)("404.1")),1),s[0]||(s[0]=V("br",null,null,-1)),Et(" "+ce(K(t)("404.2")),1),s[1]||(s[1]=V("br",null,null,-1))]),s[2]||(s[2]=V("pre",null,`       \\
+         ^^^^^^^^^^^^^^^^`,-1))]),o[4]||(o[4]=V("div",{class:"flex border-t border-dashed"},[V("a",{href:"https://github.com/Ega-telkom",class:"flex gap-1 items-center text-sm px-3 py-1"},[V("span",{class:"text-sm! material-icons no-underline!"},"open_in_new"),V("span",{class:"underline hover:decoration-dashed"},"GitHub")])],-1))])])])],64))}}),wm={class:"border p-2 w-fit"},Om=ut({__name:"NotFound",setup(e){const{t}=rn();return(n,s)=>(te(),pe(he,null,[V("div",wm,[Et(ce(K(t)("404.1")),1),s[0]||(s[0]=V("br",null,null,-1)),Et(" "+ce(K(t)("404.2")),1),s[1]||(s[1]=V("br",null,null,-1))]),s[2]||(s[2]=V("pre",null,`       \\
         \\   ^__^
          \\  (oo)\\_______
             (o>)\\       )\\/\\
