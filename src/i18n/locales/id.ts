@@ -6,25 +6,10 @@ export default {
   navbar: {
     home: "Ke Beranda",
   },
-  footer: {
-    socials: {
-      title: "SOCIALS",
-      Github: "Github",
-      LinkedIn: "LinkedIn",
-    },
-    see_also: {
-      title: "SEE ALSO",
-    },
-    address: {
-      title: "ADDRESS",
-      desc: "SMK Telkom Purwokerto, Jalan Mayor Jenderal DI. Panjaitan, Teluk, Purwokerto, Banyumas, Central Java, Java, 53141",
-    },
-    copy: "(C) 2025 Ega, MIT License. Indie·Indeed(TM)",
-  },
   home: {
-    title: "Ega - Home",
+    title: "Beranda",
     greeting: {
-      1: "Halo disana!",
+      1: "Halo, disana!",
       2: "Saya Danendra Eganatha Syahsamaauren",
       3: "Panggil saja Ega",
     },
@@ -56,41 +41,100 @@ export default {
       }
     },
     contact: {
-      title: "Contact",
+      title: "Kontak",
       email: {
-        title: "Email:",
-        content: "ega8642 [at] gmail [dot] com"
-      },
-      phone: {
-        title: "Phone:",
-        content: "(+62) 812-2825-1248"
+        title: "Surel:",
       },
     },
   },
   project: {
     title: "Proyek-proyek",
+    desc: "Klik gambar untuk zum...",
+    more: {
+      title: "Proyek lainnya...",
+      content: "Pergi ke profil github-ku untuk melihat proyek-proyek lain milikku"
+    },
     "port-1": {
       title: "port-1",
-      image: "/images/port-1.png",
-      content: "Sebuah laman web portfolio sederhana. Dibuat menggunakan Vite/Vue.js dan beberapa komponen seperti vue-i18n untuk internasionalisasi dan pelokalan (i18n). Dan juga menggunakan TailwindCSS untuk mempermudah deklarasi gaya. (Typescript, Vite, Vue.js)"
+      image: "/images/port-1.webp",
+      content: "Sebuah laman web portfolio sederhana dan sekaligus aneh. Dibuat menggunakan Vite/Vue.js dan beberapa komponen seperti vue-i18n untuk internasionalisasi dan pelokalan (i18n). Dan juga menggunakan TailwindCSS untuk mempermudah deklarasi gaya. (Typescript, Vite, Vue.js)",
+      link1: {
+        name: "Repositori",
+      },
+      link2: {
+        name: "Situs",
+      },
     },
-    "jalurku": {
+    fundivest: {
+      title: "fundivest",
+      image: "/images/fundivest.webp",
+      content:
+        "Sebuah situs tentang gamifikasi \"finansial\". Proyek ini dibuat untuk kompetisi Fictpact yang diadakan oleh Unika. Saya membuat infrastruktur backend untuk proyek ini. Dibangun menggunakan Go Fiber, PostgreSQL, Valkey, MinIO, and Gotenberg. Catatan: Situs kemungkinan tidak bekerja sempurna, dikarenakan saya mematikan backend-nya",
+      link1: {
+        name: "Repositori",
+      },
+      link2: {
+        name: "Situs",
+      },
+    },
+    Biblio: {
+      title: "Biblio",
+      image: "/images/biblio.webp",
+      content: "Sebuah aplikasi bertemakan perpustakaan. Dibangun menggunakan pustaka Android Jetpack Compose. Bilah bawah terinspirasi oleh \"Now Playing\" milik Spotify. *Hampir semuanya dalam Kotlin.",
+      link1: {
+        name: "Repositori",
+      },
+      link2: {
+        name: "",
+      },
+    },
+    jalurku: {
       title: "jalurku",
-      image: "/images/port-1.png",
-      content: ""
+      image: "/images/jalurku.webp",
+      content: "Sebuah situs tentang mengkurasi semua minat Anda menjadi satu jurusan sekolah. Proyek ini dibuat untuk Jagoan Hosting_ Infra Competition. Backend-nya dibangun menggunakan Go Fiber, PostgreSQL, dan Redis.",
+      link1: {
+        name: "Repositori",
+      },
+      link2: {
+        name: "",
+      },
+    },   
+    Smilebox: {
+      title: "Smilebox",
+      image: "/images/smilebox.webp",
+      content: "Sebuah situs tentang doktor gigi. Dibuat menggunakan HTML, CSS, dan Javascript. Situs ini membuatku juara #1 pada kompetisi UNIPRO Stage X yang diadakan oleh Unikama.",
+      link1: {
+        name: "Repositori",
+      },
+      link2: {
+        name: "Situs",
+      },
     },
-    "Phostel": {
+    Eatscape: {
+      title: "Eatscape",
+      image: "/images/eatscape.webp",
+      content: "Sebuah situs tentang makanan. Dengan mengetahuinya. Situs ini untuk kompetisi INVENTION yang diadakan oleh Udayana.",
+      link1: {
+        name: "Repositori",
+      },
+      link2: {
+        name: "Situs",
+      },
+    },
+    Phostel: {
       title: "Phostel",
-      image: "/images/port-1.png",
-      content: ""
+      image: "/images/phostel.webp",
+      content: "Sebuah situs dinamis pertamaku tentang foto. Sebuah repositori gambar. Dibangun menggunakan Flask, SQLite, dan konten yang disimpan secara lokal. Catatan: Di tangkapan layarnya, semua foto diambil oleh saya.",
+      link1: {
+        name: "Repositori",
+      },
+      link2: {
+        name: "",
+      },
     },
-    "ddcutil-bh1750": {
-      title: "ddcutil-bh1750",
-      image: "/images/port-1.png",
-      content: ""
-    }
   },
   404: {
+    title: "404",
     1: "Boo! Tidak ada apa-apa disini!",
     2: "Pergi ke tempat lain sana!",
   },
