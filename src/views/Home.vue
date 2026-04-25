@@ -130,9 +130,8 @@ const skillCategories = ['tool', 'programming', 'framework', 'language'] as cons
                 >{{ t("home.contact.title") }}</a
             >
         </h2>
-        <ul>
-            <li>Email:</li>
-            <li>Phone/Whatsapp:</li>
+        <ul class="pt-2">
+            <li>{{ t("home.contact.email.title") }} {{ t("home.contact.email.content") }}</li>
         </ul>
     </div>
 </template>
