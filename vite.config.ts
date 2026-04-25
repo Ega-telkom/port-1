@@ -14,7 +14,14 @@ export default defineConfig({
     VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**'),
       runtimeOnly: false,
-    })
+    }),
+    {
+      name: 'copy-index-to-404',
+      closeBundle() {
+        const fs = require('fs')
+        fs.copyFileSync('dist/index.html', 'dist/404.html')
+      }
+    }
   ],
   resolve: {
     alias: {

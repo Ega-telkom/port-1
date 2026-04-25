@@ -13,6 +13,7 @@
     "@intlify/unplugin-vue-i18n": "^11.0.3",
     "typescript": "~5.9.3",
     "vite": "^7.1.7",
+    "vite-plugin-single-spa": "^1.1.0",
     "vue-tsc": "^3.2.5"
   },
   "dependencies": {
