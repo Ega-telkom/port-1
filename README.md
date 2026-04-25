@@ -8,6 +8,10 @@
 
 Sebuah portfolio versi 2.0 milik Ega.
 
+## TODO
+- [ ] Simpan dimensi thumbnail
+- [ ] Ikon
+
 ## Memulai & Membangun
 Untuk memulai website secara lokal:
 ```sh
