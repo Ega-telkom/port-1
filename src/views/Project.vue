@@ -1,27 +1,153 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
-const projectKeys = ['port-1', 'jalurku', 'Phostel']
+import PhotoSwipeLightbox from 'photoswipe/lightbox'
+import { onMounted, onUnmounted, ref } from 'vue'
+import 'photoswipe/style.css'
+
+const imgRef = ref()
+
+const lightbox = new PhotoSwipeLightbox({
+  pswpModule: () => import('photoswipe'),
+})
+
+onMounted(() => lightbox.init())
+onUnmounted(() => lightbox.destroy())
+
+const projectKeys = [
+    "port-1",
+    "fundivest",
+    "Biblio",
+    "jalurku",
+    "Smilebox",
+    "Eatscape",
+    "Phostel",
+];
+
+function openImage(key: string) {
+  const img = new Image()
+  img.src = t(`project.${key}.image`)
+  img.onload = () => {
+    lightbox.loadAndOpen(0, [{
+      src: img.src,
+      width: img.naturalWidth,
+      height: img.naturalHeight
+    }])
+  }
+}
 </script>
 
 <template>
     <!-- content -->
     <div class="border p-5 mb-5 w-fit mx-auto text-center">
-        <span class="font-bold">{{ t("project.title") }}</span><br />
+        <span class="font-bold">{{ t("project.title") }}</span
+        ><br />
+        <i>{{ t("project.desc") }}</i>
     </div>
 
-    <div v-for="key in projectKeys" :key="key">
-        <h2 class="mb-2 border-b font-bold">
-            {{ t(`project.${key}.title`) }}
-        </h2>
-        <div class="max-w-6xl bg-neutral-200 border mb-2">
-            <img
-            fetchpriority="high"
-            class="w-full object-cover object-top"
-            :src="t(`project.${key}.image`)"
-            :alt="t(`project.${key}.title`)"
-            />
+    <div class="columns-1 md:columns-2 gap-6">
+        <div
+            v-for="key in projectKeys"
+            :key="key"
+            class="break-inside-avoid mb-6"
+        >
+            <div class="flex">
+                <h2
+                    class="font-bold px-3 py-1 border border-b-0 bg-neutral-200 text-sm translate-y-px"
+                >
+                    {{ t(`project.${key}.title`) }}
+                </h2>
+            </div>
+            <div class="border">
+                <div class="bg-neutral-200 cursor-zoom-in">
+                    <img :src="t(`project.${key}.image`)" @click="openImage(key)" class="cursor-zoom-in" />
+                </div>
+            </div>
+            <p
+                class="text-sm px-3 py-1 border-x"
+                :class="{
+                    'border-b': !t(`project.${key}.link1.url`),
+                }"
+            >
+                {{ t(`project.${key}.content`) }}
+            </p>
+            <div
+                v-if="t(`project.${key}.link1.url`)"
+                :class="{
+                    'border-b':
+                        t(`project.${key}.link1.url`) ||
+                        t(`project.${key}.link2.url`),
+                }"
+                class="flex border [border-top-style:dashed] border-x"
+            >
+                <a
+                    v-if="t(`project.${key}.link1.url`)"
+                    :href="t(`project.${key}.link1.url`)"
+                    class="flex gap-1 items-center text-sm px-3 py-1 border-t-0"
+                >
+                    <span class="text-sm! material-icons no-underline!"
+                        >open_in_new</span
+                    >
+                    <span class="underline hover:decoration-dashed">
+                        {{ t(`project.${key}.link1.name`) }}
+                    </span>
+                </a>
+                <a
+                    v-if="t(`project.${key}.link2.url`)"
+                    :href="t(`project.${key}.link2.url`)"
+                    class="flex gap-1 items-center text-sm py-1 border-t-0"
+                >
+                    <span class="text-sm! material-icons no-underline!"
+                        >open_in_new</span
+                    >
+                    <span class="underline hover:decoration-dashed">
+                        {{ t(`project.${key}.link2.name`) }}
+                    </span>
+                </a>
+            </div>
         </div>
-        <p class="mb-6">{{ t(`project.${key}.content`) }}</p>
+        <div class="break-inside-avoid mb-6">
+            <div class="flex">
+                <h2
+                    class="font-bold px-3 py-1 border border-b-0 bg-neutral-200 text-sm translate-y-px"
+                >
+                    {{ t("project.more.title") }}
+                </h2>
+            </div>
+            <div class="border">
+                <div
+                    class="bg-neutral-200 py-5 text-sm px-3 border-b border-dashed"
+                >
+                    {{ t("project.more.content") }}
+                    <pre>
+   \
+    \    ^__^
+     \   (oo)\_______
+         (__)\       )\/\
+             ||----w |
+             ||     ||
+         ^^^^^^^^^^^^^^^^</pre
+                    >
+                </div>
+                <div class="flex border-t border-dashed">
+                    <a
+                        href="https://github.com/USERNAME"
+                        class="flex gap-1 items-center text-sm px-3 py-1"
+                    >
+                        <span class="text-sm! material-icons no-underline!"
+                            >open_in_new</span
+                        >
+                        <span class="underline hover:decoration-dashed"
+                            >GitHub</span
+                        >
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
+<style>
+.pswp__img {
+  background: transparent !important; /* atau warna sesuai background page */
+}
+</style>
