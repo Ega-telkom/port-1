@@ -58,6 +58,8 @@ export default {
     "port-1": {
       title: "port-1",
       image: "/images/port-1.webp",
+      imageWidth: "1706",
+      imageHeight: "1400",
       content:
         "A simple yet quite wierd portfolio website. Made using Vite/Vue.js and a few components like vue-i18n for internationalization and localization (i18n). Also uses TailwindCSS to ease the styling declaration. (Typescript, Vite, Vue.js)",
       link1: {
@@ -72,6 +74,8 @@ export default {
     fundivest: {
       title: "fundivest",
       image: "/images/fundivest.webp",
+      imageWidth: "1920",
+      imageHeight: "4375",
       content:
         "A site all about \"financial\" stuff but in a game sense. This project is for Fictpact competition held by Unika. I made the backend infrastructure for the project. Built using Go Fiber, PostgreSQL, Valkey, MinIO, and Gotenberg. (Site probably don't work as intended, as I take down the backend.)",
       link1: {
@@ -86,6 +90,8 @@ export default {
     Biblio: {
       title: "Biblio",
       image: "/images/biblio.webp",
+      imageWidth: "2832",
+      imageHeight: "1142",
       content:
         "A library themed app. Built using native Android's Jetpack Compose. The bottom bar is inspired by Spotify's \"Now Playing\". *Almost Everything is in Kotlin.",
       link1: {
@@ -100,6 +106,8 @@ export default {
     jalurku: {
       title: "jalurku",
       image: "/images/jalurku.webp",
+      imageWidth: "1920",
+      imageHeight: "5242",
       content:
         "A site all about curating all of your interests into one school major you can decide later on. This project is for Jagoan Hosting_ Infra Competition. The backend is built using Go Fiber, PostgreSQL, and Redis.",
       link1: {
@@ -114,6 +122,8 @@ export default {
     Smilebox: {
       title: "Smilebox",
       image: "/images/smilebox.webp",
+      imageWidth: "1920",
+      imageHeight: "9966",
       content: "A site about dental. Made using simple HTML, CSS, and Javascript. This site lead me in achieving #1 position in UNIPRO Stage X competition held by Unikama",
       link1: {
         name: "Repository",
@@ -127,6 +137,8 @@ export default {
     Eatscape: {
       title: "Eatscape",
       image: "/images/eatscape.webp",
+      imageWidth: "1920",
+      imageHeight: "3978",
       content: "A site about food. Specifically by knowing them. This is for INVENTION competiton held by Udayana.",
       link1: {
         name: "Repository",
@@ -140,6 +152,8 @@ export default {
     Phostel: {
       title: "Phostel",
       image: "/images/phostel.webp",
+      imageWidth: "1920",
+      imageHeight: "2072",
       content: "My first dynamic site about pictures. It's an image repository. Built using Flask, SQLite, and locally stored contents. Note: In the screenshoot, the pictures is all taken by me.",
       link1: {
         name: "Repository",
