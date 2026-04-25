@@ -134,7 +134,7 @@ function openImage(key: string, event: MouseEvent) {
                 </div>
                 <div class="flex border-t border-dashed">
                     <a
-                        href="https://github.com/USERNAME"
+                        href="https://github.com/Ega-telkom"
                         class="flex gap-1 items-center text-sm px-3 py-1"
                     >
                         <span class="text-sm! material-icons no-underline!"
