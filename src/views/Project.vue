@@ -26,20 +26,16 @@ const projectKeys = [
 
 function openImage(key: string, event: MouseEvent) {
   const img = event.target as HTMLImageElement
-  const fullSrc = t(`project.${key}.image`) // public/images/xxx.jpg
-  const lowresSrc = fullSrc.replace('/images/', '/images/thumb/')
+  const fullSrc = t(`project.${key}.image`)
+  const thumbSrc = fullSrc.replace('/images/', '/images/thumb/')
 
-  const imgEl = new Image()
-  imgEl.src = fullSrc
-  imgEl.onload = () => {
-    lightbox.loadAndOpen(0, [{
-      src: fullSrc,
-      msrc: lowresSrc, // placeholder saat loading
-      width: imgEl.naturalWidth,
-      height: imgEl.naturalHeight,
-      thumbEl: img
-    }])
-  }
+  lightbox.loadAndOpen(0, [{
+    src: fullSrc,
+    msrc: thumbSrc,
+    width: parseInt(t(`project.${key}.imageWidth`)),
+    height: parseInt(t(`project.${key}.imageHeight`)),
+    thumbEl: img
+  }])
 }
 </script>
 
