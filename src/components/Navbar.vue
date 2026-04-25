@@ -49,7 +49,7 @@ const menuItems = computed<MenuItem[]>(() => [
                 class="font-bold hover:underline pb-2"
             >
                 <span v-if="route.name === 'home'"> PORTFOLIO-1 v.2.0.0 </span>
-                <span v-else> ← {{ t("navbar.home") }}</span>
+                <span v-else> < {{ t("navbar.home") }}</span>
             </RouterLink>
 
             <!-- Mobile Toggle -->
