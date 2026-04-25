@@ -25,7 +25,7 @@ onMounted(() => {
         :hole-size="14"
         :hole-gap="20"
         :strip-width="30"
-        class="max-w-5xl mx-auto md:my-5"
+        class="max-w-5xl mx-auto lg:my-5"
     >
         <Navbar />
         <router-view />
