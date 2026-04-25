@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'url'
+import fs from 'fs'
 import path from 'path'
 
 export default defineConfig({
@@ -18,7 +19,6 @@ export default defineConfig({
     {
       name: 'copy-index-to-404',
       closeBundle() {
-        const fs = require('fs')
         fs.copyFileSync('dist/index.html', 'dist/404.html')
       }
     }
