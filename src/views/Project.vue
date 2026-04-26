@@ -1,8 +1,26 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+const { t, locale } = useI18n();
+import { useHead } from '@unhead/vue'
+import { computed } from 'vue'
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
 import { onMounted, onUnmounted, ref } from 'vue'
+
+useHead({
+  title: computed(() => t('meta.home.title')),
+  meta: [
+    { name: 'description', content: computed(() => t('project.desc')) },
+    { property: 'og:title', content: computed(() => t('project.title')) },
+    { property: 'og:description', content: computed(() => t('project.desc')) },
+    { property: 'og:url', content: computed(() => t('project.url')) },
+    // { property: 'og:image', content: 'https://example.com/og.jpg' },
+    { property: 'og:type', content: 'website' },
+  ],
+  htmlAttrs: {
+    lang: computed(() => locale.value)
+  }
+})
+
 import 'photoswipe/style.css'
 
 const imgRef = ref()
@@ -44,7 +62,7 @@ function openImage(key: string, event: MouseEvent) {
     <div class="border p-5 mb-5 w-fit mx-auto text-center">
         <span class="font-bold">{{ t("project.title") }}</span
         ><br />
-        <i>{{ t("project.desc") }}</i>
+        {{ t("project.desc") }}
     </div>
 
     <div class="columns-1 md:columns-2 gap-6">

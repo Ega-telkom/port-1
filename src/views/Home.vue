@@ -1,7 +1,24 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-const { t, tm, rt } = useI18n()
+const { t, tm, rt, locale } = useI18n()
+import { useHead } from '@unhead/vue'
+import { computed } from 'vue'
 const skillCategories = ['tool', 'programming', 'framework', 'language'] as const
+
+useHead({
+  title: computed(() => t('meta.home.title')),
+  meta: [
+    { name: 'description', content: computed(() => t('home.desc')) },
+    { property: 'og:title', content: computed(() => t('home.title')) },
+    { property: 'og:description', content: computed(() => t('home.desc')) },
+    { property: 'og:url', content: computed(() => t('home.url')) },
+    // { property: 'og:image', content: 'https://example.com/og.jpg' },
+    { property: 'og:type', content: 'website' },
+  ],
+  htmlAttrs: {
+    lang: computed(() => locale.value)
+  }
+})
 </script>
 <template>
     <div class="border p-2 w-fit">
