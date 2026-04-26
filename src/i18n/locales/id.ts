@@ -8,6 +8,8 @@ export default {
   },
   home: {
     title: "Beranda",
+    desc: "Beranda portfolio Ega",
+    url: "https://port-1.greneboy.com/id/",
     greeting: {
       1: "Halo, disana!",
       2: "Saya Danendra Eganatha Syahsamaauren",
@@ -49,7 +51,8 @@ export default {
   },
   project: {
     title: "Proyek-proyek",
-    desc: "Klik gambar untuk zum...",
+    desc: "Koleksi proyek-proyek Ega",
+    url: "https://port-1.greneboy.com/id/project/",
     more: {
       title: "Proyek lainnya...",
       content: "Pergi ke profil github-ku untuk melihat proyek-proyek lain milikku"
@@ -135,6 +138,7 @@ export default {
   },
   404: {
     title: "404",
+    desc: "404 Tidak ditemukan",
     1: "Boo! Tidak ada apa-apa disini!",
     2: "Pergi ke tempat lain sana!",
   },

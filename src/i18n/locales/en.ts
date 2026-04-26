@@ -8,6 +8,8 @@ export default {
   },
   home: {
     title: "Home",
+    desc: "Ega's portfolio homepage",
+    url: "https://port-1.greneboy.com/",
     greeting: {
       1: "Hello, there!",
       2: "I'm Danendra Eganatha Syahsamaauren",
@@ -50,7 +52,8 @@ export default {
   },
   project: {
     title: "Projects",
-    desc: "Click image to zoom...",
+    desc: "Ega's project collections",
+    url: "https://port-1.greneboy.com/project/",
     more: {
       title: "More projects...",
       content: "Go to my github profile to see my other projects!"
@@ -167,6 +170,7 @@ export default {
   },
   404: {
     title: "404",
+    desc: "404 Not found",
     1: "Boo! There's nothing here!",
     2: "Go somewhere else!",
   },
