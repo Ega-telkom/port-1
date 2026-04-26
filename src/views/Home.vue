@@ -6,7 +6,7 @@ import { computed } from 'vue'
 const skillCategories = ['tool', 'programming', 'framework', 'language'] as const
 
 useHead({
-  title: computed(() => t('meta.home.title')),
+  title: computed(() => t('home.title')),
   meta: [
     { name: 'description', content: computed(() => t('home.desc')) },
     { property: 'og:title', content: computed(() => t('home.title')) },

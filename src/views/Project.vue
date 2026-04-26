@@ -7,7 +7,7 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox'
 import { onMounted, onUnmounted, ref } from 'vue'
 
 useHead({
-  title: computed(() => t('meta.home.title')),
+  title: computed(() => t('project.title')),
   meta: [
     { name: 'description', content: computed(() => t('project.desc')) },
     { property: 'og:title', content: computed(() => t('project.title')) },

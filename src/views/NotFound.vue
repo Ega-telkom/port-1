@@ -5,7 +5,7 @@ import { useHead } from '@unhead/vue'
 import { computed } from 'vue'
 
 useHead({
-  title: computed(() => t('meta.home.title')),
+  title: computed(() => t('404.title')),
   meta: [
     { name: 'description', content: computed(() => t('404.desc')) },
     { property: 'og:title', content: computed(() => t('404.title')) },
