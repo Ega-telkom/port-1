@@ -24,7 +24,7 @@ const currentLocale = computed<"en" | "id">(() => {
 const menuItems = computed<MenuItem[]>(() => [
     {
         label: t("link.cv"),
-        href: "/misc/test.pdf",
+        href: "/misc/Danendra_Eganatha_Syahsamaauren_CV.pdf",
         isExternal: true,
     },
     {
